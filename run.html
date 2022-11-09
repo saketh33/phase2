@@ -48,12 +48,12 @@
       </section>
     <section>
         <div id="side-header">
-            <div class="sidenav ps-4 text-start">
-                <a href="#about"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house me-2" viewBox="0 0 16 16">
+            <div class="sidenav ps-sm-2 ps-md-4 text-start">
+                <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house me-2" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
                     <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
                   </svg> Dashboard</a>
-                <a href="#services"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-collapse me-2" viewBox="0 0 16 16">
+                <a href="run.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-collapse me-2" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"/>
                   </svg>Running Schedule</a>
                 <a href="#clients"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear me-2" viewBox="0 0 16 16">
@@ -70,10 +70,10 @@
                             <a class="nav-link" data-page="active" href="#active">Communication Settings</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" data-page="upcoming" href="#upcoming">Schedule Settings</a>
+                            <a class="nav-link" id="upcoming" data-page="upcoming" href="#upcoming">Schedule Settings</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" data-page="past" href="#past">Auto Schedule</a>
+                            <a class="nav-link" id="past" data-page="past" href="#past">Auto Schedule</a>
                           </li>
                         </ul>
                       </nav>
@@ -82,29 +82,29 @@
                 <div id="pages">
                     <div id="active" class="page" data-page="active" style="margin-top: 40px;">
                         <div class="d-flex flex-row flex-wrap">
-                            <h6>Communication Type:</h6>
-                            <div class="form-check fs-6 ms-5">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    RS485
-                                </label>
-                              </div>
-                              <div class="form-check fs-6 ms-5">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label" for="flexCheckChecked">
+                            <h6 class="pe-4 pt-2">Communication Type:</h6>
+                            <div style="width: 30%;">
+                              <select class="col form-select form-select-sm div-toggle" aria-label=".form-select-sm example" data-target="info">
+                                <option selected value="default">Open this select menu</option>
+                                <option value="option1">
+                                  RS485
+                              </option>
+                                <option value="option2">
+                                  <div class="form-check fs-6 ms-5">
                                     Serial Port
-                                </label>
-                              </div>
-                              <div class="form-check fs-6 ms-5">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label" for="flexCheckChecked">
+                                  </div>
+                                </option>
+                                <option value="option3">
+                                  <div class="form-check fs-6 ms-5">
                                     TCP IP
-                                </label>
-                              </div>
+                                  </div>
+                                </option>
+                              </select>
+                            </div>
                         </div>
                         <div class="container-fluid">
                             <div class="row text-start mt-5">
-                                <div class="col-5">
+                                <div class="col-md-5 mb-3">
                                     <h5>Port Details</h5>
                                     <div class="card p-4">
                                         <div class="row">
@@ -136,29 +136,86 @@
                                         </div>
                                       </div>
                                 </div> 
-                                <div class="col-7">
+                                <div class="col-md-7">
                                     <h5>Meter Details</h5>
-                                    <div class="card p-4">
-                                        <h6 class="">Selected parameters : </h6>
+                                    <div class="card p-4 pt-3">
                                         <div class="row">
-                                            <select class="col-6 form-select form-select-sm" aria-label=".form-select-sm example">
-                                                <option selected>Open this select menu</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                              </select>
+                                          <div class="col-md-5">
+                                            <div class="">
+                                              <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Selected parameters </button>
+                                            </div>
+                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                              <div class="modal-dialog">
+                                                <div class="modal-content" id="editor">
+                                                  <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Selection of parameters</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                  </div>
+                                                  <div class="modal-body fs-6">
+                                                    <div class="form-check">
+                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Biling profile" id="flexCheckDefault">
+                                                        Biling profile
+                                                      </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Daily load profile" id="flexCheckDefault">
+                                                        Daily load profile
+                                                      </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Instantaneous" id="flexCheckDefault">
+                                                        Instantaneous
+                                                      </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Power fail related events" id="flexCheckDefault">
+                                                        Power fail related events
+                                                      </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Voltage related events" id="flexCheckDefault">
+                                                        Voltage related events
+                                                      </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Current related events" id="flexCheckDefault">
+                                                        Current related events
+                                                      </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <label><input class="form-check-input" type="checkbox" name="check" value=" Other events" id="flexCheckDefault">
+                                                        Other events
+                                                      </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Non-rolled events" id="flexCheckDefault">
+                                                        Non-rolled events
+                                                      </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Load profile" id="flexCheckDefault">
+                                                        Load profile
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" id="btnSave" >Update</button>
+                                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="col" >
+                                            <p id="demo" class="fs-6 pt-2"></p>
+                                          </div>
                                         </div>
                                         <div class="row pt-3">
-                                            <h6 class="col">Number of Meters: </h6>
-                                            <select class="col form-select form-select-sm" aria-label=".form-select-sm example">
-                                                <option selected>Open this select menu</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                              </select>
+                                            <h6 class="col-5 pt-1">Number of Meters: </h6>
+                                            <input type="tel" class="col form-control form-control-sm" id="exampleFormControlInput1" placeholder="Write numeric value">
                                         </div>
                                         <div>
-                                            <a href="#" class="btn btn-outline-secondary mt-4">Generate</a>
+                                            <button class="btn btn-outline-secondary mt-4 next" onclick="nextop()">Next</button>
                                         </div>
                                       </div>
                                 </div>
@@ -166,6 +223,12 @@
                         </div>
                     </div>
                     <section id="upcoming" class="page hide" data-page="upcoming" style="margin-top: 40px;">
+                      <div class="fs-6 text-start">
+                        <div id="default" class="group">Select communication type first from communication settings</div>
+                      <div id="option1" class="group">table1</div>
+                      <div id="option2" class="group">table2</div>
+                      <div id="option3" class="group">table3</div>
+                      </div>
                     </section>
                     <section id="past"class="page hide shadow-sm" data-page="past" style="margin-top: 40px;">
                     </section>
@@ -184,6 +247,18 @@
       </script>
       <script>
         $(document).ready(function() {
+    $(".next").on('click', function(e) {
+        e.preventDefault()
+        var page = $(this).data('page');
+        $("#pages .page:not('hide')").stop().fadeOut('fast', function() {
+            $(this).addClass('hide');
+            $('#pages .page[data-page="upcoming"]').fadeIn('slow').removeClass('hide');
+        });
+      });
+    });
+      </script>
+      <script>
+        $(document).ready(function() {
     $(".active-nav li a").on('click', function(e) {
         e.preventDefault()
         var page = $(this).data('page');
@@ -193,9 +268,36 @@
         });
     });
 });
-
+        function nextop() {
+      var content = document.querySelector(".active-nav #upcoming.nav-link");
+      document.querySelector(".active-nav li.active").classList.remove("active");
+      content.parentElement.classList.add("active");
+    }
+      </script>
+      <script>
+        $(function() {
+        $('#btnSave').click(function() {
+        var favorite = [];
+        $.each($("input[name='check']:checked"), function() {
+          favorite.push($(this).val());
+            });
+          $('#demo').html(favorite.join(", "));
+          $('#staticBackdrop').modal('hide');
+        });
+      });
+      </script>
+      <script>
+        $(document).ready(function () {
+  $('.group').hide();
+  $('#default').show();
+  $('.div-toggle').change(function () {
+    $('.group').hide();
+    $('#'+$(this).val()).show();
+  })
+});
       </script>
   </body>
 
   </html>
+  
   
