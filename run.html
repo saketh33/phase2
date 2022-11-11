@@ -225,9 +225,129 @@
                     <section id="upcoming" class="page hide" data-page="upcoming" style="margin-top: 40px;">
                       <div class="fs-6 text-start">
                         <div id="default" class="group">Select communication type first from communication settings</div>
-                      <div id="option1" class="group">table1</div>
-                      <div id="option2" class="group">table2</div>
-                      <div id="option3" class="group">table3</div>
+                      <div id="option1" class="group">
+                        <div id="">
+                          <table id="data_table" class="table border rounded-circle">
+                          <thead>
+                          <th scope="col">Name</th>
+                          <th scope="col">Country</th>
+                          <th scope="col">Age</th>
+                          <th scope="col"></th>
+                          </thead>
+                          <tbody>
+                            <tr id="row1">
+                              <td id="name_row1">Ankit</td>
+                              <td id="country_row1">India</td>
+                              <td id="age_row1">20</td>
+                              <td>
+                              <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                              <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                              <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+                              </td>
+                              </tr>
+                              <tr id="row2">
+                              <td id="name_row2">Shawn</td>
+                              <td id="country_row2">Canada</td>
+                              <td id="age_row2">26</td>
+                              <td>
+                              <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                              <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+                              <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+                              </td>
+                              </tr>
+                              <tr id="row3">
+                              <td id="name_row3">Rahul</td>
+                              <td id="country_row3">India</td>
+                              <td id="age_row3">19</td>
+                              <td>
+                              <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+                              <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+                              <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+                              </td>
+                              </tr>
+                              <tr>
+                              <td><input type="text" id="new_name"></td>
+                              <td><input type="text" id="new_country"></td>
+                              <td><input type="text" id="new_age"></td>
+                              <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+                              </tr>
+                          </tbody>
+                          </table>
+                          <button class="btn btn-outline-secondary mt-4 next2" onclick="next2op()">Submit</button>
+                          </div>
+                      </div>
+                      <div id="option2" class="group">
+                        <div id="">
+                          <table id="data_table" class="table border rounded-circle">
+                          <thead>
+                          <th scope="col">Name</th>
+                          <th scope="col">Country</th>
+                          <th scope="col">Age</th>
+                          <th scope="col"></th>
+                          </thead>
+                          <tbody>
+                            <tr id="row1">
+                              <td id="name_row1">Ankit</td>
+                              <td id="country_row1">India</td>
+                              <td id="age_row1">20</td>
+                              <td>
+                              <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                              <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                              <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+                              </td>
+                              </tr>
+                              <tr id="row2">
+                              <td id="name_row2">Shawn</td>
+                              <td id="country_row2">Canada</td>
+                              <td id="age_row2">26</td>
+                              <td>
+                              <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                              <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+                              <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+                              </td>
+                              </tr>
+                              <tr>
+                              <td><input type="text" id="new_name"></td>
+                              <td><input type="text" id="new_country"></td>
+                              <td><input type="text" id="new_age"></td>
+                              <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+                              </tr>
+                          </tbody>
+                          </table>
+                          <button class="btn btn-outline-secondary mt-4 next2" onclick="next2op()">Submit</button>
+                          </div>
+                      </div>
+                      <div id="option3" class="group">
+                        <div id="">
+                          <table id="data_table" class="table border rounded-circle">
+                          <thead>
+                          <th scope="col">Name</th>
+                          <th scope="col">Country</th>
+                          <th scope="col">Age</th>
+                          <th scope="col"></th>
+                          </thead>
+                          <tbody>
+                            <tr id="row1">
+                              <td id="name_row1">Ankit</td>
+                              <td id="country_row1">India</td>
+                              <td id="age_row1">20</td>
+                              <td>
+                              <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                              <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                              <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+                              </td>
+                              </tr>
+                              <tr>
+                              <td><input type="text" id="new_name"></td>
+                              <td><input type="text" id="new_country"></td>
+                              <td><input type="text" id="new_age"></td>
+                              <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+                              </tr>
+                          </tbody>
+                          </table>
+                          <button class="btn btn-outline-secondary mt-4 next2" onclick="next2op()">Submit</button>
+                          </div>
+                      </div>
                       </div>
                     </section>
                     <section id="past"class="page hide shadow-sm" data-page="past" style="margin-top: 40px;">
@@ -247,18 +367,6 @@
       </script>
       <script>
         $(document).ready(function() {
-    $(".next").on('click', function(e) {
-        e.preventDefault()
-        var page = $(this).data('page');
-        $("#pages .page:not('hide')").stop().fadeOut('fast', function() {
-            $(this).addClass('hide');
-            $('#pages .page[data-page="upcoming"]').fadeIn('slow').removeClass('hide');
-        });
-      });
-    });
-      </script>
-      <script>
-        $(document).ready(function() {
     $(".active-nav li a").on('click', function(e) {
         e.preventDefault()
         var page = $(this).data('page');
@@ -266,12 +374,41 @@
             $(this).addClass('hide');
             $('#pages .page[data-page="'+page+'"]').fadeIn('slow').removeClass('hide');
         });
+      });
+    });
+      </script>
+      <script>
+        $(document).ready(function() {
+    $(".next").on('click', function(e) {
+        e.preventDefault()
+        var page = $(this).data('page');
+        $("#pages .page:not('hide')").stop().fadeOut('fast', function() {
+            $(this).addClass('hide');
+            $('#pages .page[data-page="upcoming"]').fadeIn('slow').removeClass('hide');
+        });
     });
 });
         function nextop() {
       var content = document.querySelector(".active-nav #upcoming.nav-link");
       document.querySelector(".active-nav li.active").classList.remove("active");
       content.parentElement.classList.add("active");
+    }
+      </script>
+      <script>
+        $(document).ready(function() {
+    $(".next2").on('click', function(e) {
+        e.preventDefault()
+        var page = $(this).data('page');
+        $("#pages .page:not('hide')").stop().fadeOut('fast', function() {
+            $(this).addClass('hide');
+            $('#pages .page[data-page="past"]').fadeIn('slow').removeClass('hide');
+        });
+    });
+});
+        function next2op() {
+      var content1 = document.querySelector(".active-nav #past.nav-link");
+      document.querySelector(".active-nav li.active").classList.remove("active");
+      content1.parentElement.classList.add("active");
     }
       </script>
       <script>
@@ -296,6 +433,91 @@
   })
 });
       </script>
+      <script>function edit_row(no)
+        {
+         document.getElementById("edit_button"+no).style.display="none";
+         document.getElementById("save_button"+no).style.display="block";
+            
+         var name=document.getElementById("name_row"+no);
+         var country=document.getElementById("country_row"+no);
+         var age=document.getElementById("age_row"+no);
+            
+         var name_data=name.innerHTML;
+         var country_data=country.innerHTML;
+         var age_data=age.innerHTML;
+            
+         name.innerHTML="<input type='text' id='name_text"+no+"' value='"+name_data+"'>";
+         country.innerHTML="<input type='text' id='country_text"+no+"' value='"+country_data+"'>";
+         age.innerHTML="<input type='text' id='age_text"+no+"' value='"+age_data+"'>";
+        }
+        
+        function save_row(no)
+        {
+         var name_val=document.getElementById("name_text"+no).value;
+         var country_val=document.getElementById("country_text"+no).value;
+         var age_val=document.getElementById("age_text"+no).value;
+        
+         document.getElementById("name_row"+no).innerHTML=name_val;
+         document.getElementById("country_row"+no).innerHTML=country_val;
+         document.getElementById("age_row"+no).innerHTML=age_val;
+        
+         document.getElementById("edit_button"+no).style.display="block";
+         document.getElementById("save_button"+no).style.display="none";
+        }
+        
+        function delete_row(no)
+        {
+         document.getElementById("row"+no+"").outerHTML="";
+        }
+        
+        function add_row()
+        {
+         var new_name=document.getElementById("new_name").value;
+         var new_country=document.getElementById("new_country").value;
+         var new_age=document.getElementById("new_age").value;
+            
+         var table=document.getElementById("data_table");
+         var table_len=(table.rows.length)-1;
+         var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+        
+         document.getElementById("new_name").value="";
+         document.getElementById("new_country").value="";
+         document.getElementById("new_age").value="";
+        }
+        </script>
+            <!--<script type="text/javascript">
+                function Convert() {
+                    var table = document.getElementById("data_table");
+                    var header = [];
+                    var rows = [];
+             
+                    for (var i = 0; i < table.rows[0].cells.length; i++) {
+                        header.push(table.rows[0].cells[i].innerHTML);
+                    }
+                    for (var i = 1; i < table.rows.length-1; i++) {
+                        var row = {};
+                        for (var j = 0; j <3; j++) {
+                            row[header[j]] = table.rows[i].cells[j].innerHTML;
+                        }
+                        rows.push(row);
+                    }
+                    
+                    var xhr = new XMLHttpRequest();
+                    var url = "url";
+                    xhr.open("POST", url, true);
+                    xhr.setRequestHeader("Content-Type", "application/json");
+                    // xhr.onreadystatechange = function () {
+                    //                  if (xhr.readyState === 4 && xhr.status === 200) {
+                    //         var json = JSON.parse(xhr.responseText);
+    
+                    //         alert(json);
+                    //     }
+                    // };
+                    var data = JSON.stringify(rows);
+                    alert(data);
+                    xhr.send(data);
+                }
+            </script>-->
   </body>
 
   </html>
