@@ -495,7 +495,7 @@
         }
         </script>
       <script>
-      function edit2_row(no)
+        function edit2_row(no)
         {
          document.getElementById("edit2_button"+no).style.display="none";
          document.getElementById("save2_button"+no).style.display="block";
@@ -526,7 +526,6 @@
          document.getElementById("edit2_button"+no).style.display="block";
          document.getElementById("save2_button"+no).style.display="none";
         }
-        
         function delete2_row(no)
         {
          document.getElementById("rows"+no+"").outerHTML="";
@@ -565,7 +564,7 @@
              age.innerHTML="<input type='text' id='age3_text"+no+"' value='"+age_data+"'>";
             }
             
-            function save2_row(no)
+            function save3_row(no)
             {
              var name_val=document.getElementById("name3_text"+no).value;
              var country_val=document.getElementById("country3_text"+no).value;
