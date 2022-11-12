@@ -60,6 +60,9 @@
                     <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
                     <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
                   </svg>Schedule config</a>
+                  <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-collapse me-2" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"/>
+                  </svg>Auto Schedule</a>
               </div>
               <div class="main-content my-4">
                 <section class="navbar-light bg-white">
@@ -67,291 +70,297 @@
                       <nav id="navbar-example2" class="navbar px-3">
                         <ul class="nav active-nav">
                           <li class="nav-item active">
-                            <a class="nav-link" data-page="active" href="#active">Communication Settings</a>
+                            <a class="nav-link" id="active" data-page="active" href="#active">Communication Settings</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" id="upcoming" data-page="upcoming" href="#upcoming">Schedule Settings</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" id="past" data-page="past" href="#past">Auto Schedule</a>
                           </li>
                         </ul>
                       </nav>
                     </div>
                     </section>
                 <div id="pages">
+                  <form>
                     <div id="active" class="page" data-page="active" style="margin-top: 40px;">
-                        <div class="d-flex flex-row flex-wrap">
-                            <h6 class="pe-4 pt-2">Communication Type:</h6>
-                            <div style="width: 30%;">
-                              <select class="col form-select form-select-sm div-toggle" aria-label=".form-select-sm example" data-target="info">
-                                <option selected value="default">Open this select menu</option>
-                                <option value="option1">
-                                  RS485
+                      <div class="d-flex flex-row flex-wrap">
+                          <h6 class="pe-4 pt-2">Communication Type:</h6>
+                          <div style="width: 30%;">
+                            <select class="col form-select form-select-sm div-toggle" aria-label=".form-select-sm example" data-target="info">
+                              <option selected value="default">Open this select menu</option>
+                              <option value="option1">
+                                RS485
+                            </option>
+                              <option value="option2">
+                                <div class="form-check fs-6 ms-5">
+                                  Serial Port
+                                </div>
                               </option>
-                                <option value="option2">
-                                  <div class="form-check fs-6 ms-5">
-                                    Serial Port
-                                  </div>
-                                </option>
-                                <option value="option3">
-                                  <div class="form-check fs-6 ms-5">
-                                    TCP IP
-                                  </div>
-                                </option>
-                              </select>
-                            </div>
-                        </div>
-                        <div class="container-fluid">
-                            <div class="row text-start mt-5">
-                                <div class="col-md-5 mb-3">
-                                    <h5>Port Details</h5>
-                                    <div class="card p-4">
-                                        <div class="row">
-                                            <h6 class="col-5">COM Port :</h6>
-                                            <select class="col form-select form-select-sm" aria-label=".form-select-sm example">
-                                                <option selected>Open this select menu</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                              </select>
-                                        </div>
-                                        <div class="row pt-3">
-                                            <h6 class="col-5">Parity :</h6>
-                                            <select class="col form-select form-select-sm" aria-label=".form-select-sm example">
-                                                <option selected>Open this select menu</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                              </select>
-                                        </div>
-                                        <div class="row pt-3">
-                                            <h6 class="col-5">Baud Rate :</h6>
-                                            <select class="col form-select form-select-sm" aria-label=".form-select-sm example">
-                                                <option selected>Open this select menu</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                              </select>
-                                        </div>
+                              <option value="option3">
+                                <div class="form-check fs-6 ms-5">
+                                  TCP IP
+                                </div>
+                              </option>
+                            </select>
+                          </div>
+                      </div>
+                      <div class="container-fluid">
+                          <div class="row text-start mt-5">
+                              <div class="col-md-5 mb-3">
+                                  <h5>Port Details</h5>
+                                  <div class="card p-4">
+                                      <div class="row">
+                                          <h6 class="col-5">COM Port :</h6>
+                                          <select class="col form-select form-select-sm" aria-label=".form-select-sm example">
+                                              <option selected>Open this select menu</option>
+                                              <option value="1">One</option>
+                                              <option value="2">Two</option>
+                                              <option value="3">Three</option>
+                                            </select>
                                       </div>
-                                </div> 
-                                <div class="col-md-7">
-                                    <h5>Meter Details</h5>
-                                    <div class="card p-4 pt-3">
-                                        <div class="row">
-                                          <div class="col-md-5">
-                                            <div class="">
-                                              <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Selected parameters </button>
-                                            </div>
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                              <div class="modal-dialog">
-                                                <div class="modal-content" id="editor">
-                                                  <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Selection of parameters</h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      <div class="row pt-3">
+                                          <h6 class="col-5">Parity :</h6>
+                                          <select class="col form-select form-select-sm" aria-label=".form-select-sm example">
+                                              <option selected>Open this select menu</option>
+                                              <option value="1">One</option>
+                                              <option value="2">Two</option>
+                                              <option value="3">Three</option>
+                                            </select>
+                                      </div>
+                                      <div class="row pt-3">
+                                          <h6 class="col-5">Baud Rate :</h6>
+                                          <select class="col form-select form-select-sm" aria-label=".form-select-sm example">
+                                              <option selected>Open this select menu</option>
+                                              <option value="1">One</option>
+                                              <option value="2">Two</option>
+                                              <option value="3">Three</option>
+                                            </select>
+                                      </div>
+                                    </div>
+                              </div> 
+                              <div class="col-md-7">
+                                  <h5>Meter Details</h5>
+                                  <div class="card p-4 pt-3">
+                                      <div class="row">
+                                        <div class="col-md-5">
+                                          <div class="">
+                                            <a class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Selected parameters </a>
+                                          </div>
+                                          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content" id="editor">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Selection of parameters</h1>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body fs-6">
+                                                  <div class="form-check">
+                                                    <label><input class="form-check-input" type="checkbox" name="check" value="Biling profile" id="flexCheckDefault">
+                                                      Biling profile
+                                                    </label>
                                                   </div>
-                                                  <div class="modal-body fs-6">
-                                                    <div class="form-check">
-                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Biling profile" id="flexCheckDefault">
-                                                        Biling profile
-                                                      </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Daily load profile" id="flexCheckDefault">
-                                                        Daily load profile
-                                                      </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Instantaneous" id="flexCheckDefault">
-                                                        Instantaneous
-                                                      </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Power fail related events" id="flexCheckDefault">
-                                                        Power fail related events
-                                                      </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Voltage related events" id="flexCheckDefault">
-                                                        Voltage related events
-                                                      </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Current related events" id="flexCheckDefault">
-                                                        Current related events
-                                                      </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                      <label><input class="form-check-input" type="checkbox" name="check" value=" Other events" id="flexCheckDefault">
-                                                        Other events
-                                                      </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Non-rolled events" id="flexCheckDefault">
-                                                        Non-rolled events
-                                                      </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                      <label><input class="form-check-input" type="checkbox" name="check" value="Load profile" id="flexCheckDefault">
-                                                        Load profile
-                                                      </label>
-                                                    </div>
+                                                  <div class="form-check">
+                                                    <label><input class="form-check-input" type="checkbox" name="check" value="Daily load profile" id="flexCheckDefault">
+                                                      Daily load profile
+                                                    </label>
                                                   </div>
-                                                  <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" id="btnSave" >Update</button>
-                                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+                                                  <div class="form-check">
+                                                    <label><input class="form-check-input" type="checkbox" name="check" value="Instantaneous" id="flexCheckDefault">
+                                                      Instantaneous
+                                                    </label>
                                                   </div>
+                                                  <div class="form-check">
+                                                    <label><input class="form-check-input" type="checkbox" name="check" value="Power fail related events" id="flexCheckDefault">
+                                                      Power fail related events
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label><input class="form-check-input" type="checkbox" name="check" value="Voltage related events" id="flexCheckDefault">
+                                                      Voltage related events
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label><input class="form-check-input" type="checkbox" name="check" value="Current related events" id="flexCheckDefault">
+                                                      Current related events
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label><input class="form-check-input" type="checkbox" name="check" value=" Other events" id="flexCheckDefault">
+                                                      Other events
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label><input class="form-check-input" type="checkbox" name="check" value="Non-rolled events" id="flexCheckDefault">
+                                                      Non-rolled events
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label><input class="form-check-input" type="checkbox" name="check" value="Load profile" id="flexCheckDefault">
+                                                      Load profile
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" id="btnSave" >Update</button>
+                                                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                                 </div>
                                               </div>
                                             </div>
                                           </div>
-                                          <div class="col" >
-                                            <p id="demo" class="fs-6 pt-2"></p>
-                                          </div>
                                         </div>
-                                        <div class="row pt-3">
-                                            <h6 class="col-5 pt-1">Number of Meters: </h6>
-                                            <input type="tel" class="col form-control form-control-sm" id="exampleFormControlInput1" placeholder="Write numeric value">
-                                        </div>
-                                        <div>
-                                            <button class="btn btn-outline-secondary mt-4 next" onclick="nextop()">Next</button>
+                                        <div class="col" >
+                                          <p id="demo" class="fs-6 pt-2"></p>
                                         </div>
                                       </div>
-                                </div>
-                            </div>
+                                      <div class="row pt-3">
+                                          <h6 class="col-5 pt-1">Number of Meters: </h6>
+                                          <input type="tel" class="col form-control form-control-sm" id="exampleFormControlInput1" placeholder="Write numeric value">
+                                      </div>
+                                    </div>
+                                    <div class="d-flex flex-row-reverse">
+                                      <button class="btn btn-outline-secondary mt-4 next" onclick="nextop()">Next</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <section id="upcoming" class="page hide" data-page="upcoming" style="margin-top: 40px;">
+                    <div class="fs-6 text-start">
+                      <div id="default" class="group">Select communication type first from communication settings</div>
+                    <div id="option1" class="group">
+                      <div id="">
+                        <table id="data_table" class="table border rounded-circle">
+                        <thead>
+                        <th scope="col">Name</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Age</th>
+                        <th scope="col"></th>
+                        </thead>
+                        <tbody>
+                          <tr id="row1">
+                            <td id="name_row1">Ankit</td>
+                            <td id="country_row1">India</td>
+                            <td id="age_row1">20</td>
+                            <td>
+                            <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                            <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                            <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+                            </td>
+                            </tr>
+                            <tr id="row2">
+                            <td id="name_row2">Shawn</td>
+                            <td id="country_row2">Canada</td>
+                            <td id="age_row2">26</td>
+                            <td>
+                            <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                            <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+                            <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+                            </td>
+                            </tr>
+                            <tr id="row3">
+                            <td id="name_row3">Rahul</td>
+                            <td id="country_row3">India</td>
+                            <td id="age_row3">19</td>
+                            <td>
+                            <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+                            <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+                            <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td><input type="text" id="new_name"></td>
+                            <td><input type="text" id="new_country"></td>
+                            <td><input type="text" id="new_age"></td>
+                            <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <div class="d-flex justify-content-between align-items-end">
+                          <button class="btn btn-outline-secondary mt-4 prev" onclick="next2op()">Previous</button>
+                          <button class="btn btn-outline-secondary mt-4" onclick="">Submit</button>
+                      </div>
                         </div>
                     </div>
-                    <section id="upcoming" class="page hide" data-page="upcoming" style="margin-top: 40px;">
-                      <div class="fs-6 text-start">
-                        <div id="default" class="group">Select communication type first from communication settings</div>
-                      <div id="option1" class="group">
-                        <div id="">
-                          <table id="data_table" class="table border rounded-circle">
-                          <thead>
-                          <th scope="col">Name</th>
-                          <th scope="col">Country</th>
-                          <th scope="col">Age</th>
-                          <th scope="col"></th>
-                          </thead>
-                          <tbody>
-                            <tr id="row1">
-                              <td id="name_row1">Ankit</td>
-                              <td id="country_row1">India</td>
-                              <td id="age_row1">20</td>
-                              <td>
-                              <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
-                              <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
-                              <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
-                              </td>
-                              </tr>
-                              <tr id="row2">
-                              <td id="name_row2">Shawn</td>
-                              <td id="country_row2">Canada</td>
-                              <td id="age_row2">26</td>
-                              <td>
-                              <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
-                              <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
-                              <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
-                              </td>
-                              </tr>
-                              <tr id="row3">
-                              <td id="name_row3">Rahul</td>
-                              <td id="country_row3">India</td>
-                              <td id="age_row3">19</td>
-                              <td>
-                              <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
-                              <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
-                              <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
-                              </td>
-                              </tr>
-                              <tr>
-                              <td><input type="text" id="new_name"></td>
-                              <td><input type="text" id="new_country"></td>
-                              <td><input type="text" id="new_age"></td>
-                              <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
-                              </tr>
-                          </tbody>
-                          </table>
-                          <button class="btn btn-outline-secondary mt-4 next2" onclick="next2op()">Submit</button>
-                          </div>
+                    <div id="option2" class="group">
+                      <div id="">
+                        <table id="data_table2" class="table border rounded-circle">
+                        <thead>
+                        <th scope="col">Name</th>
+                        <th scope="col">Class</th>
+                        <th scope="col">section</th>
+                        <th scope="col"></th>
+                        </thead>
+                        <tbody>
+                          <tr id="rows1">
+                            <td id="name2_row1">Ankit</td>
+                            <td id="country2_row1">India</td>
+                            <td id="age2_row1">20</td>
+                            <td>
+                            <input type="button" id="edit2_button1" value="Edit" class="edit" onclick="edit2_row('1')">
+                            <input type="button" id="save2_button1" value="Save" class="save" onclick="save2_row('1')">
+                            <input type="button" value="Delete" class="delete" onclick="delete2_row('1')">
+                            </td>
+                            </tr>
+                            <tr id="rows2">
+                            <td id="name2_row2">Shawn</td>
+                            <td id="country2_row2">Canada</td>
+                            <td id="age2_row2">26</td>
+                            <td>
+                            <input type="button" id="edit2_button2" value="Edit" class="edit" onclick="edit2_row('2')">
+                            <input type="button" id="save2_button2" value="Save" class="save" onclick="save2_row('2')">
+                            <input type="button" value="Delete" class="delete" onclick="delete2_row('2')">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td><input type="text" id="new2_name"></td>
+                            <td><input type="text" id="new2_country"></td>
+                            <td><input type="text" id="new2_age"></td>
+                            <td><input type="button" class="add" onclick="add2_row();" value="Add Row"></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <div class="d-flex justify-content-between align-items-end">
+                          <button class="btn btn-outline-secondary mt-4 prev" onclick="next2op()">Previous</button>
+                          <button class="btn btn-outline-secondary mt-4" onclick="">Submit</button>
                       </div>
-                      <div id="option2" class="group">
-                        <div id="">
-                          <table id="data_table" class="table border rounded-circle">
-                          <thead>
-                          <th scope="col">Name</th>
-                          <th scope="col">Country</th>
-                          <th scope="col">Age</th>
-                          <th scope="col"></th>
-                          </thead>
-                          <tbody>
-                            <tr id="row1">
-                              <td id="name_row1">Ankit</td>
-                              <td id="country_row1">India</td>
-                              <td id="age_row1">20</td>
-                              <td>
-                              <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
-                              <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
-                              <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
-                              </td>
-                              </tr>
-                              <tr id="row2">
-                              <td id="name_row2">Shawn</td>
-                              <td id="country_row2">Canada</td>
-                              <td id="age_row2">26</td>
-                              <td>
-                              <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
-                              <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
-                              <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
-                              </td>
-                              </tr>
-                              <tr>
-                              <td><input type="text" id="new_name"></td>
-                              <td><input type="text" id="new_country"></td>
-                              <td><input type="text" id="new_age"></td>
-                              <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
-                              </tr>
-                          </tbody>
-                          </table>
-                          <button class="btn btn-outline-secondary mt-4 next2" onclick="next2op()">Submit</button>
-                          </div>
+                        </div>
+                    </div>
+                    <div id="option3" class="group">
+                      <div id="">
+                        <table id="data_table3" class="table border rounded-circle">
+                        <thead>
+                        <th scope="col">Name</th>
+                        <th scope="col">subject</th>
+                        <th scope="col">marks</th>
+                        <th scope="col"></th>
+                        </thead>
+                        <tbody>
+                          <tr id="rowz1">
+                            <td id="name3_row1">Ankit</td>
+                            <td id="country3_row1">India</td>
+                            <td id="age3_row1">20</td>
+                            <td>
+                            <input type="button" id="edit3_button1" value="Edit" class="edit" onclick="edit3_row('1')">
+                            <input type="button" id="save3_button1" value="Save" class="save" onclick="save3_row('1')">
+                            <input type="button" value="Delete" class="delete" onclick="delete3_row('1')">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td><input type="text" id="new3_name"></td>
+                            <td><input type="text" id="new3_country"></td>
+                            <td><input type="text" id="new3_age"></td>
+                            <td><input type="button" class="add" onclick="add3_row();" value="Add Row"></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <div class="d-flex justify-content-between align-items-end">
+                          <button class="btn btn-outline-secondary mt-4 prev" onclick="next2op()">Previous</button>
+                          <button class="btn btn-outline-secondary mt-4" onclick="">Submit</button>
                       </div>
-                      <div id="option3" class="group">
-                        <div id="">
-                          <table id="data_table" class="table border rounded-circle">
-                          <thead>
-                          <th scope="col">Name</th>
-                          <th scope="col">Country</th>
-                          <th scope="col">Age</th>
-                          <th scope="col"></th>
-                          </thead>
-                          <tbody>
-                            <tr id="row1">
-                              <td id="name_row1">Ankit</td>
-                              <td id="country_row1">India</td>
-                              <td id="age_row1">20</td>
-                              <td>
-                              <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
-                              <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
-                              <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
-                              </td>
-                              </tr>
-                              <tr>
-                              <td><input type="text" id="new_name"></td>
-                              <td><input type="text" id="new_country"></td>
-                              <td><input type="text" id="new_age"></td>
-                              <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
-                              </tr>
-                          </tbody>
-                          </table>
-                          <button class="btn btn-outline-secondary mt-4 next2" onclick="next2op()">Submit</button>
-                          </div>
-                      </div>
-                      </div>
-                    </section>
-                    <section id="past"class="page hide shadow-sm" data-page="past" style="margin-top: 40px;">
-                    </section>
+                        </div>
+                    </div>
+                    </div>
+                  </section>
+                  </form>
                 </div>
               </div>
         </div>
@@ -396,17 +405,17 @@
       </script>
       <script>
         $(document).ready(function() {
-    $(".next2").on('click', function(e) {
+    $(".prev").on('click', function(e) {
         e.preventDefault()
         var page = $(this).data('page');
         $("#pages .page:not('hide')").stop().fadeOut('fast', function() {
             $(this).addClass('hide');
-            $('#pages .page[data-page="past"]').fadeIn('slow').removeClass('hide');
+            $('#pages .page[data-page="active"]').fadeIn('slow').removeClass('hide');
         });
     });
 });
         function next2op() {
-      var content1 = document.querySelector(".active-nav #past.nav-link");
+      var content1 = document.querySelector(".active-nav #active.nav-link");
       document.querySelector(".active-nav li.active").classList.remove("active");
       content1.parentElement.classList.add("active");
     }
@@ -485,39 +494,110 @@
          document.getElementById("new_age").value="";
         }
         </script>
-            <!--<script type="text/javascript">
-                function Convert() {
-                    var table = document.getElementById("data_table");
-                    var header = [];
-                    var rows = [];
-             
-                    for (var i = 0; i < table.rows[0].cells.length; i++) {
-                        header.push(table.rows[0].cells[i].innerHTML);
-                    }
-                    for (var i = 1; i < table.rows.length-1; i++) {
-                        var row = {};
-                        for (var j = 0; j <3; j++) {
-                            row[header[j]] = table.rows[i].cells[j].innerHTML;
-                        }
-                        rows.push(row);
-                    }
-                    
-                    var xhr = new XMLHttpRequest();
-                    var url = "url";
-                    xhr.open("POST", url, true);
-                    xhr.setRequestHeader("Content-Type", "application/json");
-                    // xhr.onreadystatechange = function () {
-                    //                  if (xhr.readyState === 4 && xhr.status === 200) {
-                    //         var json = JSON.parse(xhr.responseText);
-    
-                    //         alert(json);
-                    //     }
-                    // };
-                    var data = JSON.stringify(rows);
-                    alert(data);
-                    xhr.send(data);
-                }
-            </script>-->
+      <script>
+      function edit2_row(no)
+        {
+         document.getElementById("edit2_button"+no).style.display="none";
+         document.getElementById("save2_button"+no).style.display="block";
+            
+         var name=document.getElementById("name2_row"+no);
+         var country=document.getElementById("country2_row"+no);
+         var age=document.getElementById("age2_row"+no);
+            
+         var name_data=name.innerHTML;
+         var country_data=country.innerHTML;
+         var age_data=age.innerHTML;
+            
+         name.innerHTML="<input type='text' id='name2_text"+no+"' value='"+name_data+"'>";
+         country.innerHTML="<input type='text' id='country2_text"+no+"' value='"+country_data+"'>";
+         age.innerHTML="<input type='text' id='age2_text"+no+"' value='"+age_data+"'>";
+        }
+        
+        function save2_row(no)
+        {
+         var name_val=document.getElementById("name2_text"+no).value;
+         var country_val=document.getElementById("country2_text"+no).value;
+         var age_val=document.getElementById("age2_text"+no).value;
+        
+         document.getElementById("name2_row"+no).innerHTML=name_val;
+         document.getElementById("country2_row"+no).innerHTML=country_val;
+         document.getElementById("age2_row"+no).innerHTML=age_val;
+        
+         document.getElementById("edit2_button"+no).style.display="block";
+         document.getElementById("save2_button"+no).style.display="none";
+        }
+        
+        function delete2_row(no)
+        {
+         document.getElementById("rows"+no+"").outerHTML="";
+        }
+        function add2_row()
+        {
+         var new_name=document.getElementById("new2_name").value;
+         var new_country=document.getElementById("new2_country").value;
+         var new_age=document.getElementById("new2_age").value;
+            
+         var table=document.getElementById("data_table2");
+         var table_len=(table.rows.length)-1;
+         var row = table.insertRow(table_len).outerHTML="<tr id='rows"+table_len+"'><td id='name2_row"+table_len+"'>"+new_name+"</td><td id='country2_row"+table_len+"'>"+new_country+"</td><td id='age2_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit2_button"+table_len+"' value='Edit' class='edit' onclick='edit2_row("+table_len+")'> <input type='button' id='save2_button"+table_len+"' value='Save' class='save' onclick='save2_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete2_row("+table_len+")'></td></tr>";
+        
+         document.getElementById("new2_name").value="";
+         document.getElementById("new2_country").value="";
+         document.getElementById("new2_age").value="";
+        }
+        </script>
+        <script>
+          function edit3_row(no)
+            {
+             document.getElementById("edit3_button"+no).style.display="none";
+             document.getElementById("save3_button"+no).style.display="block";
+                
+             var name=document.getElementById("name3_row"+no);
+             var country=document.getElementById("country3_row"+no);
+             var age=document.getElementById("age3_row"+no);
+                
+             var name_data=name.innerHTML;
+             var country_data=country.innerHTML;
+             var age_data=age.innerHTML;
+                
+             name.innerHTML="<input type='text' id='name3_text"+no+"' value='"+name_data+"'>";
+             country.innerHTML="<input type='text' id='country3_text"+no+"' value='"+country_data+"'>";
+             age.innerHTML="<input type='text' id='age3_text"+no+"' value='"+age_data+"'>";
+            }
+            
+            function save2_row(no)
+            {
+             var name_val=document.getElementById("name3_text"+no).value;
+             var country_val=document.getElementById("country3_text"+no).value;
+             var age_val=document.getElementById("age3_text"+no).value;
+            
+             document.getElementById("name3_row"+no).innerHTML=name_val;
+             document.getElementById("country3_row"+no).innerHTML=country_val;
+             document.getElementById("age3_row"+no).innerHTML=age_val;
+            
+             document.getElementById("edit3_button"+no).style.display="block";
+             document.getElementById("save3_button"+no).style.display="none";
+            }
+            
+            function delete3_row(no)
+            {
+             document.getElementById("rowz"+no+"").outerHTML="";
+            }
+            function add3_row()
+            {
+             var new_name=document.getElementById("new3_name").value;
+             var new_country=document.getElementById("new3_country").value;
+             var new_age=document.getElementById("new3_age").value;
+                
+             var table=document.getElementById("data_table3");
+             var table_len=(table.rows.length)-1;
+             var row = table.insertRow(table_len).outerHTML="<tr id='rowz"+table_len+"'><td id='name3_row"+table_len+"'>"+new_name+"</td><td id='country3_row"+table_len+"'>"+new_country+"</td><td id='age3_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit3_button"+table_len+"' value='Edit' class='edit' onclick='edit3_row("+table_len+")'> <input type='button' id='save3_button"+table_len+"' value='Save' class='save' onclick='save3_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete3_row("+table_len+")'></td></tr>";
+            
+             document.getElementById("new3_name").value="";
+             document.getElementById("new3_country").value="";
+             document.getElementById("new3_age").value="";
+            }
+            </script>
   </body>
 
   </html>
