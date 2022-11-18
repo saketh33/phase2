@@ -5,6 +5,14 @@ body{
    #top-header,#side-header{
     max-width: 1200px;
   }
+  .navbar-nav .nav-item{
+    font-size: large;
+  }
+  .navbar-nav .nav-item:hover{
+    border-radius: 8%;
+    background-color: rgb(243, 243, 243);
+  }
+  
   @media screen and (min-width: 1200px) {
     #top-header,#side-header{
         text-align: center;
@@ -20,7 +28,7 @@ body{
     z-index: 1;
     top: 70px;
     left: 0;
-    background-color: #DEDEDE;
+    background-color: #3dcd58;
     overflow-x: hidden;
     padding-top: 20px;
   }
@@ -29,7 +37,7 @@ body{
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #000000;
+    color: #ffff;
     display: block;
   }
   @media screen and (max-width: 500px){
@@ -42,9 +50,14 @@ body{
     }
   }
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: rgb(85, 85, 85);
   }
-  
+  .tog{
+    display: none;
+  }
+  .offcanvas.show .tog{
+    display: block;
+  }
   .main-content{
     margin-left: 25%; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
@@ -72,7 +85,7 @@ body{
     content: "";
     height: 4px;
     width: 100%;
-    background-color: #ff105e;
+    background-color: #3dcd58;
     left: 0;
     bottom: -7px;
     border-radius: 20px;
