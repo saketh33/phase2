@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white flex-fill">
           <div class="container-fluid">
             <img src="images/logo_se_green_rgb_screen.png" id="logo" width="120px" height="50px">
-            <h4 class="ms-3">DLMS Scheduler</h4>
+            <h4 class="ms-3 tog-1">DLMS Scheduler</h4>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -72,9 +72,20 @@
                 <a href="run.html"><img src="images/dashboard.png" style="width: 20px; height: 20px;" class="me-2">Running Schedule</a>
                 <a href="#clients"><img src="images/gear.png" style="width: 20px; height: 20px;" class="me-2">Schedule config</a>
                   <a href=""><img src="images/new-tab.png" style="width: 20px; height: 20px;" class="me-2">Auto Schedule</a>
-                  <a class="btn btn-primary mx-2 ms-md-0 me-md-4" style="margin-top: 300px;" class="me-2">Get Support</a>
+                  <a class="btn btn-primary mx-2 ms-md-0 me-md-4" style="margin-top: 250px;" class="me-2">Get Support</a>
               </div>
               <div class="main-content my-4">
+                <div id="mySidebar" class="sidebar">
+                  <div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
+                  <div class="ps-sm-2 ps-md-4 text-start">
+                    <a href="index.html"><img src="images/layout.png" style="width: 20px; height: 20px;" class="me-2">Dashboard</a>
+                    <a href="run.html"><img src="images/dashboard.png" style="width: 20px; height: 20px;" class="me-2">Running Schedule</a>
+                    <a href="#clients"><img src="images/gear.png" style="width: 20px; height: 20px;" class="me-2">Schedule config</a>
+                      <a href=""><img src="images/new-tab.png" style="width: 20px; height: 20px;" class="me-2">Auto Schedule</a>
+                      <a class="btn btn-primary mx-5" style="margin-top: 300px;" class="me-2">Get Support</a>
+                  </div>
+              </div>        
+              <button class="openbtn hidebtn" onclick="openNav()">&#9776; Table of content</button>
                 <section class="navbar-light bg-white">
                     <div id="header">
                       <nav id="navbar-example2" class="navbar px-3">
@@ -149,10 +160,10 @@
                               </div> 
                               <div class="col-md-7">
                                   <h5>Meter Details</h5>
-                                  <div class="card p-4 pt-3">
+                                  <div class="card p-4 pt-2">
                                       <div class="row">
                                         <div class="col-md-5">
-                                          <div class="">
+                                          <div class="mb-2">
                                             <a class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Selected parameters </a>
                                           </div>
                                           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -218,10 +229,14 @@
                                           </div>
                                         </div>
                                         <div class="col" >
-                                          <p id="demo" class="fs-6 pt-2"></p>
+                                          <p id="demo" class="fs-6 pt-2 mb-2"></p>
                                         </div>
                                       </div>
-                                      <div class="row pt-3">
+                                      <div class="row pt-1">
+                                        <h6 class="col-6 pt-1">Number of Parameter selected </h6>
+                                        <div class="col fs-6 pt-2" id="countno"></div>
+                                    </div>
+                                      <div class="row pt-1">
                                           <h6 class="col-5 pt-1">Number of Meters: </h6>
                                           <input type="tel" class="col form-control form-control-sm" id="exampleFormControlInput1" placeholder="Write numeric value">
                                       </div>
@@ -237,7 +252,7 @@
                     <div class="fs-6 text-start">
                       <div id="default" class="group">Select communication type first from communication settings</div>
                     <div id="option1" class="group">
-                      <div id="">
+                      <div class="table-responsive">
                         <table id="data_table" class="table border rounded-circle">
                         <thead>
                         <th scope="col">Name</th>
@@ -253,7 +268,7 @@
                             <td>
                             <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
                             <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
-                            <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+                            <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete_row('1')">
                             </td>
                             </tr>
                             <tr id="row2">
@@ -263,7 +278,7 @@
                             <td>
                             <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
                             <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
-                            <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+                            <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete_row('2')">
                             </td>
                             </tr>
                             <tr id="row3">
@@ -273,7 +288,7 @@
                             <td>
                             <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
                             <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
-                            <input type="button" value="Bin" class="delete" onclick="delete_row('3')">
+                            <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete_row('3')">
                             </td>
                             </tr>
                             <tr>
@@ -291,7 +306,7 @@
                         </div>
                     </div>
                     <div id="option2" class="group">
-                      <div id="">
+                      <div class="table-responsive">
                         <table id="data_table2" class="table border rounded-circle">
                         <thead>
                         <th scope="col">Name</th>
@@ -307,7 +322,7 @@
                             <td>
                             <input type="button" id="edit2_button1" value="Edit" class="edit" onclick="edit2_row('1')">
                             <input type="button" id="save2_button1" value="Save" class="save" onclick="save2_row('1')">
-                            <input type="button" value="Delete" class="delete" onclick="delete2_row('1')">
+                            <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete2_row('1')">
                             </td>
                             </tr>
                             <tr id="rows2">
@@ -317,7 +332,7 @@
                             <td>
                             <input type="button" id="edit2_button2" value="Edit" class="edit" onclick="edit2_row('2')">
                             <input type="button" id="save2_button2" value="Save" class="save" onclick="save2_row('2')">
-                            <input type="button" value="Delete" class="delete" onclick="delete2_row('2')">
+                            <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete2_row('2')">
                             </td>
                             </tr>
                             <tr>
@@ -335,7 +350,7 @@
                         </div>
                     </div>
                     <div id="option3" class="group">
-                      <div id="">
+                      <div class="table-responsive">
                         <table id="data_table3" class="table border rounded-circle">
                         <thead>
                         <th scope="col">Name</th>
@@ -351,7 +366,7 @@
                             <td>
                             <input type="button" id="edit3_button1" value="Edit" class="edit" onclick="edit3_row('1')">
                             <input type="button" id="save3_button1" value="Save" class="save" onclick="save3_row('1')">
-                            <input type="button" value="Delete" class="delete" onclick="delete3_row('1')">
+                            <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete3_row('1')">
                             </td>
                             </tr>
                             <tr>
@@ -439,6 +454,8 @@
             });
           $('#demo').html(favorite.join(", "));
           $('#staticBackdrop').modal('hide');
+          $('#countno').html(favorite.length);
+
         });
       });
       </script>
@@ -497,7 +514,7 @@
             
          var table=document.getElementById("data_table");
          var table_len=(table.rows.length)-1;
-         var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+         var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='image' src='images/trash-can.png' width='16' height='16' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
         
          document.getElementById("new_name").value="";
          document.getElementById("new_country").value="";
@@ -548,7 +565,7 @@
             
          var table=document.getElementById("data_table2");
          var table_len=(table.rows.length)-1;
-         var row = table.insertRow(table_len).outerHTML="<tr id='rows"+table_len+"'><td id='name2_row"+table_len+"'>"+new_name+"</td><td id='country2_row"+table_len+"'>"+new_country+"</td><td id='age2_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit2_button"+table_len+"' value='Edit' class='edit' onclick='edit2_row("+table_len+")'> <input type='button' id='save2_button"+table_len+"' value='Save' class='save' onclick='save2_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete2_row("+table_len+")'></td></tr>";
+         var row = table.insertRow(table_len).outerHTML="<tr id='rows"+table_len+"'><td id='name2_row"+table_len+"'>"+new_name+"</td><td id='country2_row"+table_len+"'>"+new_country+"</td><td id='age2_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit2_button"+table_len+"' value='Edit' class='edit' onclick='edit2_row("+table_len+")'> <input type='button' id='save2_button"+table_len+"' value='Save' class='save' onclick='save2_row("+table_len+")'> <input type='image' src='images/trash-can.png' width='16' height='16' class='delete' onclick='delete2_row("+table_len+")'></td></tr>";
         
          document.getElementById("new2_name").value="";
          document.getElementById("new2_country").value="";
@@ -600,13 +617,26 @@
                 
              var table=document.getElementById("data_table3");
              var table_len=(table.rows.length)-1;
-             var row = table.insertRow(table_len).outerHTML="<tr id='rowz"+table_len+"'><td id='name3_row"+table_len+"'>"+new_name+"</td><td id='country3_row"+table_len+"'>"+new_country+"</td><td id='age3_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit3_button"+table_len+"' value='Edit' class='edit' onclick='edit3_row("+table_len+")'> <input type='button' id='save3_button"+table_len+"' value='Save' class='save' onclick='save3_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete3_row("+table_len+")'></td></tr>";
+             var row = table.insertRow(table_len).outerHTML="<tr id='rowz"+table_len+"'><td id='name3_row"+table_len+"'>"+new_name+"</td><td id='country3_row"+table_len+"'>"+new_country+"</td><td id='age3_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit3_button"+table_len+"' value='Edit' class='edit' onclick='edit3_row("+table_len+")'> <input type='button' id='save3_button"+table_len+"' value='Save' class='save' onclick='save3_row("+table_len+")'> <input type='image' src='images/trash-can.png' width='16' height='16' class='delete' onclick='delete3_row("+table_len+")'></td></tr>";
             
              document.getElementById("new3_name").value="";
              document.getElementById("new3_country").value="";
              document.getElementById("new3_age").value="";
             }
             </script>
+            <script>
+              function openNav() {
+        document.body.style.overflowY="hidden";
+        document.getElementById("mySidebar").style.width = "100%";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      function closeNav() {
+    document.body.style.overflowY="scroll";
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+
   </body>
 
   </html>
