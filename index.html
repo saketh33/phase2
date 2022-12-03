@@ -20,8 +20,8 @@
     <div id="top-header" class="d-flex align-items-center justify-content-center" style="height: 76px;">
     <nav class="navbar navbar-expand-lg navbar-light bg-white flex-fill">
       <div class="container-fluid">
-        <img src="images/logo_se_green_rgb_screen.png" id="logo" width="120px" height="50px">
-        <h4 class="ms-3 tog-1">DLMS Scheduler</h4>
+        <img src="images/logo_se_green_rgb_screen.png" id="logo" width="150px" height="50px">
+        <h4 class="ms-4 tog-1">DLMS Scheduler</h4>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,7 +30,7 @@
             <li class="nav-item">
               <button type="button" class="float-end tog m-2 btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
               <a class="nav-link mx-2" aria-current="page" href="#">Profile</a>
             </li>
             <li class="nav-item">
@@ -44,7 +44,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link mx-2" href="#">Switch to hire</a>
-            </li>
+            </li>-->
             <div class="dropdown me-4">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle mx-2" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="https://github.com/mdo.png" alt="hugenerd" width="50" height="50" class="rounded-circle">
@@ -67,12 +67,12 @@
   </section>
     <section>
         <div id="side-header">
-          <div class="sidenav ps-sm-2 ps-md-4 text-start">
-            <a href="index.html"><img src="images/layout.png" style="width: 20px; height: 20px;" class="me-2">Dashboard</a>
-            <a href="run.html"><img src="images/dashboard.png" style="width: 20px; height: 20px;" class="me-2">Running Schedule</a>
-            <a href="#clients"><img src="images/gear.png" style="width: 20px; height: 20px;" class="me-2">Schedule config</a>
-              <a href=""><img src="images/new-tab.png" style="width: 20px; height: 20px;" class="me-2">Auto Schedule</a>
-              <a class="btn btn-primary mx-2 ms-md-0 me-md-4" style="margin-top: 300px;" class="me-2">Get Support</a>
+          <div class="sidenav px-sm-2 px-md-4 text-start">
+            <a href="index.html" class="fw-bold border fs-5 border-white"><img src="images/layout.png" style="width: 28px; height: 28px;" class="me-2">Dashboard</a>
+            <a href="run.html" class="fs-5"><img src="images/dashboard.png" style="width: 28px; height: 28px;" class="me-2">Running Schedule</a>
+            <a href="sche.html" class="fs-5"><img src="images/gear.png" style="width: 28px; height: 28px;" class="me-2">Schedule config</a>
+              <a href="" class="fs-5"><img src="images/new-tab.png" style="width: 28px; height: 28px;" class="me-2">Auto Schedule</a>
+              <a class="btn btn-primary mx-2 ms-md-0 me-md-4" style="margin-top: 250px;" class="me-2">Get Support</a>
           </div>
               <div class="main-content my-5">
                 <div id="mySidebar" class="sidebar">
@@ -80,19 +80,34 @@
                   <div class="ps-sm-2 ps-md-4 text-start">
                     <a href="index.html"><img src="images/layout.png" style="width: 20px; height: 20px;" class="me-2">Dashboard</a>
                     <a href="run.html"><img src="images/dashboard.png" style="width: 20px; height: 20px;" class="me-2">Running Schedule</a>
-                    <a href="#clients"><img src="images/gear.png" style="width: 20px; height: 20px;" class="me-2">Schedule config</a>
+                    <a href="sche.html"><img src="images/gear.png" style="width: 20px; height: 20px;" class="me-2">Schedule config</a>
                       <a href=""><img src="images/new-tab.png" style="width: 20px; height: 20px;" class="me-2">Auto Schedule</a>
                       <a class="btn btn-primary mx-5" style="margin-top: 300px;" class="me-2">Get Support</a>
                   </div>
               </div>        
               <button class="openbtn hidebtn" onclick="openNav()">&#9776; Table of content</button>
-                <canvas id="myChart" class="mx-auto" style="width:100%;max-width:800px"></canvas>
+              <div class="container-fluid text-start">
+                <h4>Total Number of meters</h4>
+                <div class="row fs-5">
+                  <div class="col-md-3 border m-4 py-2" style="background-color: #ced4da;"><img src="images/scheduled.png" style="width: 26px; height: 26px;" class="me-2">Scheduled:</div>
+                  <div class="col-md-3 border m-4 py-2" style="background-color: #ced4da;"><img src="images/successful.png" style="width: 26px; height: 26px;" class="me-2">Successful:</div>
+                  <div class="col-md-3 border m-4 py-2" style="background-color: #ced4da;"><img src="images/failed.png" style="width: 26px; height: 26px;" class="me-2">Failed:</div>
+                </div>
+                <div class="row my-3">
+                  <div class="col-md-6"><canvas id="myChart1" class="mx-auto" style="width:100%;max-width:800px"></canvas></div>
+                  <div class="col-md-6"><canvas id="myChart2" class="mx-auto" style="width:100%;max-width:800px"></canvas></div>
+                </div>
+                <div class="row my-5">
+                  <div class="col-md-6"><canvas id="myChart3" class="mx-auto" style="width:100%;max-width:800px"></canvas></div>
+                  <div class="col-md-6"><canvas id="myChart4" class="mx-auto" style="width:100%;max-width:800px"></canvas></div>
+                </div>
+              </div>
               </div>
         </div>
     </section>
     <script>
-        var xValues = ["Completed", "In progress", "Not tracked"];
-        var yValues = [55, 49, 89];
+      var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+      var yValues = [55, 49, 44, 24, 15];
         var barColors = [
           "#b91d47",
           "#00aba9",
@@ -101,8 +116,8 @@
           "#1e7145"
         ];
         
-        new Chart("myChart", {
-          type: "pie",
+        new Chart("myChart1", {
+          type: "bar",
           data: {
             labels: xValues,
             datasets: [{
@@ -111,15 +126,90 @@
             }]
           },
           options: {
+            legend: {display: false},
             title: {
               display: true,
-              text: "Report"
+              text: "Total number of meter read yearly:"
             }
           }
         });
         </script>
-        <script>
-          function openNav() {
+    <script>
+      var xValues = [50,60,70,80,90,100,110,120,130,140,150];
+var yValues = [7,8,8,9,9,9,10,11,14,14,15];
+
+new Chart("myChart2", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+    display: true,
+    text: "Total number of meter schedyled this month:"
+    },
+    scales: {
+      yAxes: [{ticks: {min: 6, max:16}}],
+    }
+  }
+});
+    </script>
+    <script>
+      var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart3", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+  }
+});
+    </script>
+    <script>
+      var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+new Chart("myChart4", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      borderColor: "#e8c3b9",
+      fill: false
+    }, { 
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      borderColor: "#b91d47",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+    </script>
+    <script>
+    function openNav() {
     document.body.style.overflowY="hidden";
     document.getElementById("mySidebar").style.width = "100%";
     document.getElementById("main").style.marginLeft = "250px";

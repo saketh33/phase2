@@ -57,7 +57,9 @@ body{
       display: none;
     }
   }
-  
+  .dropdown-menu[data-bs-popper] {
+    left: -50%!important;
+}
   .main-content{
     margin-left: 25%; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
