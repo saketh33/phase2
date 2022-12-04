@@ -54,9 +54,17 @@ body{
   .tog-1{
     display: block;
   }
-  @media screen and (max-width:450px){
+  @media screen and (max-width:992px){
     .tog-1{
       display: none;
+    }
+  }
+  @media screen and (max-width:432px){
+    #logo{
+      width: 120px !important;
+    }
+    .dlms{
+      font-size: large;
     }
   }
   .dropdown-menu[data-bs-popper] {
