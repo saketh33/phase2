@@ -12,7 +12,9 @@ body{
     border-radius: 8%;
     background-color: rgb(243, 243, 243);
   }
-  
+  .navbar-nav .dropdown-menu{
+    position: absolute !important;
+  }
   @media screen and (min-width: 1200px) {
     #top-header,#side-header{
         text-align: center;
@@ -52,13 +54,13 @@ body{
   .tog-1{
     display: block;
   }
-  @media screen and (max-width:388px){
+  @media screen and (max-width:450px){
     .tog-1{
       display: none;
     }
   }
   .dropdown-menu[data-bs-popper] {
-    left: -50%!important;
+    left: -60%!important;
 }
   .main-content{
     margin-left: 25%; /* Same as the width of the sidenav */
@@ -114,44 +116,4 @@ body{
       padding: 8px;
       font-size: 14px;
     }
-}
-.sidebar {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Stay on top */
-  top: 60px;
-  left: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-  background-color: #3dcd58;
-}
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color:  #fff;
-  color: black;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  margin-top: 10px;
-  position: sticky;
-  top: 80px;
-  z-index: 1;
-  box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.199);
-}
-.openbtn:hover {
-  background-color: #444;
-}
-
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
 }

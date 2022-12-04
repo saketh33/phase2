@@ -21,15 +21,16 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white flex-fill">
       <div class="container-fluid">
         <img src="images/logo_se_green_rgb_screen.png" id="logo" width="150px" height="50px">
-        <h4 class="ms-4 tog-1">DLMS Scheduler</h4>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-start bg-white" tabindex="-1" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0 ms-lg-auto">
+        <h4 class="ms-4 me-md-auto tog-1">DLMS Scheduler</h4>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarSupportedContent" style="background-color: #3dcd58;">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-lg-auto tog ps-sm-2 ps-md-4">
             <li class="nav-item">
-              <button type="button" class="float-end tog m-2 btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button type="button" class="float-end m-2 btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </li>
+            <li style="margin-top:50px;" class="mb-2"><a href="index.html" class="fs-4 ms-3 mb-3 text-decoration-none text-white"><img src="images/layout.png" style="width: 20px; height: 20px;" class="me-2">Dashboard</a></li>
+            <li class="mb-2"><a href="run.html" class="fs-4 ms-3 mb-3 text-decoration-none text-white"><img src="images/dashboard.png" style="width: 20px; height: 20px;" class="me-2">Running Schedule</a></li>
+            <li class="mb-2"><a href="sche.html" class="fs-4 ms-3 mb-3 text-decoration-none text-white"><img src="images/gear.png" style="width: 20px; height: 20px;" class="me-2">Schedule config</a></li>
+            <li class="mb-2"><a href="" class="fs-4 ms-3 mb-3 text-decoration-none text-white"><img src="images/new-tab.png" style="width: 20px; height: 20px;" class="me-2">Auto Schedule</a></li>
             <!--<li class="nav-item">
               <a class="nav-link mx-2" aria-current="page" href="#">Profile</a>
             </li>
@@ -45,22 +46,25 @@
             <li class="nav-item">
               <a class="nav-link mx-2" href="#">Switch to hire</a>
             </li>-->
-            <div class="dropdown me-4">
-                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle mx-2" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="hugenerd" width="50" height="50" class="rounded-circle">
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </div>
-            </div>
           </ul>     
         </div>
+        <div class="dropdown ms-auto me-4">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle mx-2" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="hugenerd" width="50" height="50" class="rounded-circle">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">New project...</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li>
+                  <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       </div>
     </nav>
   </div>
@@ -75,17 +79,6 @@
               <a class="btn btn-primary mx-2 ms-md-0 me-md-4" style="margin-top: 250px;" class="me-2">Get Support</a>
           </div>
               <div class="main-content my-4">
-                <div id="mySidebar" class="sidebar">
-                  <div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
-                  <div class="ps-sm-2 ps-md-4 text-start">
-                    <a href="index.html"><img src="images/layout.png" style="width: 20px; height: 20px;" class="me-2">Dashboard</a>
-                    <a href="run.html"><img src="images/dashboard.png" style="width: 20px; height: 20px;" class="me-2">Running Schedule</a>
-                    <a href="sche.html"><img src="images/gear.png" style="width: 20px; height: 20px;" class="me-2">Schedule config</a>
-                      <a href=""><img src="images/new-tab.png" style="width: 20px; height: 20px;" class="me-2">Auto Schedule</a>
-                      <a class="btn btn-primary mx-5" style="margin-top: 300px;" class="me-2">Get Support</a>
-                  </div>
-              </div>        
-              <button class="openbtn hidebtn" onclick="openNav()">&#9776; Table of content</button>
                 <section class="navbar-light bg-white">
                     <div id="header">
                       <nav id="navbar-example2" class="navbar px-3">
@@ -252,49 +245,42 @@
                     <div class="fs-6 text-start">
                       <div id="default" class="group">Select communication type first from communication settings</div>
                     <div id="option1" class="group">
-                      <div class="table-responsive">
+                      <div class="table-responsive fs-6">
                         <table id="data_table" class="table border rounded-circle">
                         <thead>
-                        <th scope="col">Name</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">Age</th>
+                        <th scope="col">S No.</th>
+                        <th scope="col">Meter serial Number</th>
+                        <th scope="col">Device ID</th>
+                        <th scope="col">Schedule Time</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Read Status</th>
                         <th scope="col"></th>
                         </thead>
                         <tbody>
                           <tr id="row1">
-                            <td id="name_row1">Ankit</td>
-                            <td id="country_row1">India</td>
-                            <td id="age_row1">20</td>
+                            <td id="sno_row1">3</td>
+                            <td id="serial_row1">59</td>
+                            <td id="seid_row1">apuzmp</td>
+                            <td id="stime_row1">12:23:45</td>
+                            <td id="pass_row1">opsm</td>
+                            <td id="status_row1">running</td>
+                            <td id="reads_row1">stop</td>
+                            
                             <td>
                             <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
                             <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
                             <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete_row('1')">
                             </td>
                             </tr>
-                            <tr id="row2">
-                            <td id="name_row2">Shawn</td>
-                            <td id="country_row2">Canada</td>
-                            <td id="age_row2">26</td>
-                            <td>
-                            <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
-                            <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
-                            <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete_row('2')">
-                            </td>
-                            </tr>
-                            <tr id="row3">
-                            <td id="name_row3">Rahul</td>
-                            <td id="country_row3">India</td>
-                            <td id="age_row3">19</td>
-                            <td>
-                            <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
-                            <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
-                            <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete_row('3')">
-                            </td>
-                            </tr>
                             <tr>
-                            <td><input type="text" id="new_name"></td>
-                            <td><input type="text" id="new_country"></td>
-                            <td><input type="text" id="new_age"></td>
+                            <td><input type="text" id="new_sno"></td>
+                            <td><input type="text" id="new_serial"></td>
+                            <td><input type="text" id="new_seid"></td>
+                            <td><input type="text" id="new_stime"></td>
+                            <td><input type="text" id="new_pass"></td>
+                            <td><input type="text" id="new_status"></td>
+                            <td><input type="text" id="new_reads"></td>
                             <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
                             </tr>
                         </tbody>
@@ -306,39 +292,41 @@
                         </div>
                     </div>
                     <div id="option2" class="group">
-                      <div class="table-responsive">
+                      <div class="table-responsive fs-6">
                         <table id="data_table2" class="table border rounded-circle">
                         <thead>
-                        <th scope="col">Name</th>
-                        <th scope="col">Class</th>
-                        <th scope="col">section</th>
+                        <th scope="col">S No.</th>
+                        <th scope="col">Server IP</th>
+                        <th scope="col">Server Port</th>
+                        <th scope="col">Schedule Time</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Reading Status</th>
                         <th scope="col"></th>
                         </thead>
                         <tbody>
                           <tr id="rows1">
-                            <td id="name2_row1">Ankit</td>
-                            <td id="country2_row1">India</td>
-                            <td id="age2_row1">20</td>
+                            <td id="sno2_row1">2</td>
+                            <td id="serial2_row1">127:00:00::00</td>
+                            <td id="seid2_row1">1800</td>
+                            <td id="stime2_row1">10:11:00</td>
+                            <td id="pass2_row1">suss</td>
+                            <td id="status2_row1">Successful</td>
+                            <td id="reads2_row1">completed</td>
                             <td>
                             <input type="button" id="edit2_button1" value="Edit" class="edit" onclick="edit2_row('1')">
                             <input type="button" id="save2_button1" value="Save" class="save" onclick="save2_row('1')">
                             <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete2_row('1')">
                             </td>
                             </tr>
-                            <tr id="rows2">
-                            <td id="name2_row2">Shawn</td>
-                            <td id="country2_row2">Canada</td>
-                            <td id="age2_row2">26</td>
-                            <td>
-                            <input type="button" id="edit2_button2" value="Edit" class="edit" onclick="edit2_row('2')">
-                            <input type="button" id="save2_button2" value="Save" class="save" onclick="save2_row('2')">
-                            <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete2_row('2')">
-                            </td>
-                            </tr>
                             <tr>
-                            <td><input type="text" id="new2_name"></td>
-                            <td><input type="text" id="new2_country"></td>
-                            <td><input type="text" id="new2_age"></td>
+                            <td><input type="text" id="new2_sno"></td>
+                            <td><input type="text" id="new2_serial"></td>
+                            <td><input type="text" id="new2_seid"></td>
+                            <td><input type="text" id="new2_stime"></td>
+                            <td><input type="text" id="new2_pass"></td>
+                            <td><input type="text" id="new2_status"></td>
+                            <td><input type="text" id="new2_reads"></td>
                             <td><input type="button" class="add" onclick="add2_row();" value="Add Row"></td>
                             </tr>
                         </tbody>
@@ -350,19 +338,27 @@
                         </div>
                     </div>
                     <div id="option3" class="group">
-                      <div class="table-responsive">
+                      <div class="table-responsive fs-6">
                         <table id="data_table3" class="table border rounded-circle">
                         <thead>
-                        <th scope="col">Name</th>
-                        <th scope="col">subject</th>
-                        <th scope="col">marks</th>
+                        <th scope="col">Server IP</th>
+                        <th scope="col">Server port</th>
+                        <th scope="col">Client IP</th>
+                        <th scope="col">Schedule time</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Reading status</th>
                         <th scope="col"></th>
                         </thead>
                         <tbody>
                           <tr id="rowz1">
-                            <td id="name3_row1">Ankit</td>
-                            <td id="country3_row1">India</td>
-                            <td id="age3_row1">20</td>
+                            <td id="sno3_row1">134:45:255:00</td>
+                            <td id="serial3_row1">3600</td>
+                            <td id="seid3_row1">100:67:09:89</td>
+                            <td id="stime3_row1">23:12:09</td>
+                            <td id="pass3_row1">umpt</td>
+                            <td id="status3_row1">Failed</td>
+                            <td id="reads3_row1">Incomplete</td>
                             <td>
                             <input type="button" id="edit3_button1" value="Edit" class="edit" onclick="edit3_row('1')">
                             <input type="button" id="save3_button1" value="Save" class="save" onclick="save3_row('1')">
@@ -370,9 +366,13 @@
                             </td>
                             </tr>
                             <tr>
-                            <td><input type="text" id="new3_name"></td>
-                            <td><input type="text" id="new3_country"></td>
-                            <td><input type="text" id="new3_age"></td>
+                            <td><input type="text" id="new3_sno"></td>
+                            <td><input type="text" id="new3_serial"></td>
+                            <td><input type="text" id="new3_seid"></td>
+                            <td><input type="text" id="new3_stime"></td>
+                            <td><input type="text" id="new3_pass"></td>
+                            <td><input type="text" id="new3_status"></td>
+                            <td><input type="text" id="new3_reads"></td>
                             <td><input type="button" class="add" onclick="add3_row();" value="Add Row"></td>
                             </tr>
                         </tbody>
@@ -474,28 +474,48 @@
          document.getElementById("edit_button"+no).style.display="none";
          document.getElementById("save_button"+no).style.display="block";
             
-         var name=document.getElementById("name_row"+no);
-         var country=document.getElementById("country_row"+no);
-         var age=document.getElementById("age_row"+no);
+         var sno=document.getElementById("sno_row"+no);
+         var serial=document.getElementById("serial_row"+no);
+         var seid=document.getElementById("seid_row"+no);
+         var stime=document.getElementById("stime_row"+no);
+         var pass=document.getElementById("pass_row"+no);
+         var status=document.getElementById("status_row"+no);
+         var reads=document.getElementById("reads_row"+no);
             
-         var name_data=name.innerHTML;
-         var country_data=country.innerHTML;
-         var age_data=age.innerHTML;
+         var sno_data=sno.innerHTML;
+         var serial_data=serial.innerHTML;
+         var seid_data=seid.innerHTML;
+         var stime_data=stime.innerHTML;
+         var pass_data=pass.innerHTML;
+         var status_data=status.innerHTML;
+         var reads_data=reads.innerHTML;
             
-         name.innerHTML="<input type='text' id='name_text"+no+"' value='"+name_data+"'>";
-         country.innerHTML="<input type='text' id='country_text"+no+"' value='"+country_data+"'>";
-         age.innerHTML="<input type='text' id='age_text"+no+"' value='"+age_data+"'>";
+         sno.innerHTML="<input type='text' id='sno_text"+no+"' value='"+sno_data+"'>";
+         serial.innerHTML="<input type='text' id='serial_text"+no+"' value='"+serial_data+"'>";
+         seid.innerHTML="<input type='text' id='seid_text"+no+"' value='"+seid_data+"'>";
+         stime.innerHTML="<input type='text' id='stime_text"+no+"' value='"+stime_data+"'>";
+         pass.innerHTML="<input type='text' id='pass_text"+no+"' value='"+pass_data+"'>";
+         status.innerHTML="<input type='text' id='status_text"+no+"' value='"+status_data+"'>";
+         reads.innerHTML="<input type='text' id='reads_text"+no+"' value='"+reads_data+"'>";
         }
         
         function save_row(no)
         {
-         var name_val=document.getElementById("name_text"+no).value;
-         var country_val=document.getElementById("country_text"+no).value;
-         var age_val=document.getElementById("age_text"+no).value;
+         var sno_val=document.getElementById("sno_text"+no).value;
+         var serial_val=document.getElementById("serial_text"+no).value;
+         var seid_val=document.getElementById("seid_text"+no).value;
+         var stime_val=document.getElementById("stime_text"+no).value;
+         var pass_val=document.getElementById("pass_text"+no).value;
+         var status_val=document.getElementById("status_text"+no).value;
+         var reads_val=document.getElementById("reads_text"+no).value;
         
-         document.getElementById("name_row"+no).innerHTML=name_val;
-         document.getElementById("country_row"+no).innerHTML=country_val;
-         document.getElementById("age_row"+no).innerHTML=age_val;
+         document.getElementById("sno_row"+no).innerHTML=sno_val;
+         document.getElementById("serial_row"+no).innerHTML=serial_val;
+         document.getElementById("seid_row"+no).innerHTML=seid_val;
+         document.getElementById("stime_row"+no).innerHTML=stime_val;
+         document.getElementById("pass_row"+no).innerHTML=pass_val;
+         document.getElementById("status_row"+no).innerHTML=status_val;
+         document.getElementById("reads_row"+no).innerHTML=reads_val;
         
          document.getElementById("edit_button"+no).style.display="block";
          document.getElementById("save_button"+no).style.display="none";
@@ -508,17 +528,25 @@
         
         function add_row()
         {
-         var new_name=document.getElementById("new_name").value;
-         var new_country=document.getElementById("new_country").value;
-         var new_age=document.getElementById("new_age").value;
+         var new_sno=document.getElementById("new_sno").value;
+         var new_serial=document.getElementById("new_serial").value;
+         var new_seid=document.getElementById("new_seid").value;
+         var new_stime=document.getElementById("new_stime").value;
+         var new_pass=document.getElementById("new_pass").value;
+         var new_status=document.getElementById("new_status").value;
+         var new_reads=document.getElementById("new_reads").value;
             
          var table=document.getElementById("data_table");
          var table_len=(table.rows.length)-1;
-         var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='image' src='images/trash-can.png' width='16' height='16' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+         var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='sno_row"+table_len+"'>"+new_sno+"</td><td id='serial_row"+table_len+"'>"+new_serial+"</td><td id='seid_row"+table_len+"'>"+new_seid+"</td><td id='stime_row"+table_len+"'>"+new_stime+"</td><td id='pass_row"+table_len+"'>"+new_pass+"</td><td id='status_row"+table_len+"'>"+new_status+"</td><td id='reads_row"+table_len+"'>"+new_reads+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='image' src='images/trash-can.png' width='16' height='16' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
         
-         document.getElementById("new_name").value="";
-         document.getElementById("new_country").value="";
-         document.getElementById("new_age").value="";
+         document.getElementById("new_sno").value="";
+         document.getElementById("new_serial").value="";
+         document.getElementById("new_seid").value="";
+         document.getElementById("new_stime").value="";
+         document.getElementById("new_pass").value="";
+         document.getElementById("new_status").value="";
+         document.getElementById("new_reads").value="";
         }
         </script>
       <script>
@@ -527,28 +555,49 @@
          document.getElementById("edit2_button"+no).style.display="none";
          document.getElementById("save2_button"+no).style.display="block";
             
-         var name=document.getElementById("name2_row"+no);
-         var country=document.getElementById("country2_row"+no);
-         var age=document.getElementById("age2_row"+no);
+         var sno=document.getElementById("sno2_row"+no);
+         var serial=document.getElementById("serial2_row"+no);
+         var seid=document.getElementById("seid2_row"+no);
+         var stime=document.getElementById("stime2_row"+no);
+         var pass=document.getElementById("pass2_row"+no);
+         var status=document.getElementById("status2_row"+no);
+         var reads=document.getElementById("reads2_row"+no);
             
-         var name_data=name.innerHTML;
-         var country_data=country.innerHTML;
-         var age_data=age.innerHTML;
             
-         name.innerHTML="<input type='text' id='name2_text"+no+"' value='"+name_data+"'>";
-         country.innerHTML="<input type='text' id='country2_text"+no+"' value='"+country_data+"'>";
-         age.innerHTML="<input type='text' id='age2_text"+no+"' value='"+age_data+"'>";
+         var sno_data=sno.innerHTML;
+         var serial_data=serial.innerHTML;
+         var seid_data=seid.innerHTML;
+         var stime_data=stime.innerHTML;
+         var pass_data=pass.innerHTML;
+         var status_data=status.innerHTML;
+         var reads_data=reads.innerHTML;
+            
+         sno.innerHTML="<input type='text' id='sno2_text"+no+"' value='"+sno_data+"'>";
+         serial.innerHTML="<input type='text' id='serial2_text"+no+"' value='"+serial_data+"'>";
+         seid.innerHTML="<input type='text' id='seid2_text"+no+"' value='"+seid_data+"'>";
+         stime.innerHTML="<input type='text' id='stime2_text"+no+"' value='"+stime_data+"'>";
+         pass.innerHTML="<input type='text' id='pass2_text"+no+"' value='"+pass_data+"'>";
+         status.innerHTML="<input type='text' id='status2_text"+no+"' value='"+status_data+"'>";
+         reads.innerHTML="<input type='text' id='reads2_text"+no+"' value='"+reads_data+"'>";
         }
         
         function save2_row(no)
         {
-         var name_val=document.getElementById("name2_text"+no).value;
-         var country_val=document.getElementById("country2_text"+no).value;
-         var age_val=document.getElementById("age2_text"+no).value;
+         var sno_val=document.getElementById("sno2_text"+no).value;
+         var serial_val=document.getElementById("serial2_text"+no).value;
+         var seid_val=document.getElementById("seid2_text"+no).value;
+         var stime_val=document.getElementById("stime2_text"+no).value;
+         var pass_val=document.getElementById("pass2_text"+no).value;
+         var status_val=document.getElementById("status2_text"+no).value;
+         var reads_val=document.getElementById("reads2_text"+no).value;
         
-         document.getElementById("name2_row"+no).innerHTML=name_val;
-         document.getElementById("country2_row"+no).innerHTML=country_val;
-         document.getElementById("age2_row"+no).innerHTML=age_val;
+         document.getElementById("sno2_row"+no).innerHTML=sno_val;
+         document.getElementById("serial2_row"+no).innerHTML=serial_val;
+         document.getElementById("seid2_row"+no).innerHTML=seid_val;
+         document.getElementById("stime2_row"+no).innerHTML=stime_val;
+         document.getElementById("pass2_row"+no).innerHTML=pass_val;
+         document.getElementById("status2_row"+no).innerHTML=status_val;
+         document.getElementById("reads2_row"+no).innerHTML=reads_val;
         
          document.getElementById("edit2_button"+no).style.display="block";
          document.getElementById("save2_button"+no).style.display="none";
@@ -559,17 +608,25 @@
         }
         function add2_row()
         {
-         var new_name=document.getElementById("new2_name").value;
-         var new_country=document.getElementById("new2_country").value;
-         var new_age=document.getElementById("new2_age").value;
-            
+         var new_sno=document.getElementById("new2_sno").value;
+         var new_serial=document.getElementById("new2_serial").value;
+         var new_seid=document.getElementById("new2_seid").value;
+         var new_stime=document.getElementById("new2_stime").value;
+         var new_pass=document.getElementById("new2_pass").value;
+         var new_status=document.getElementById("new2_status").value;
+         var new_reads=document.getElementById("new2_reads").value;
+         
          var table=document.getElementById("data_table2");
          var table_len=(table.rows.length)-1;
-         var row = table.insertRow(table_len).outerHTML="<tr id='rows"+table_len+"'><td id='name2_row"+table_len+"'>"+new_name+"</td><td id='country2_row"+table_len+"'>"+new_country+"</td><td id='age2_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit2_button"+table_len+"' value='Edit' class='edit' onclick='edit2_row("+table_len+")'> <input type='button' id='save2_button"+table_len+"' value='Save' class='save' onclick='save2_row("+table_len+")'> <input type='image' src='images/trash-can.png' width='16' height='16' class='delete' onclick='delete2_row("+table_len+")'></td></tr>";
+         var row = table.insertRow(table_len).outerHTML="<tr id='rows"+table_len+"'><td id='sno2_row"+table_len+"'>"+new_sno+"</td><td id='serial2_row"+table_len+"'>"+new_serial+"</td><td id='seid2_row"+table_len+"'>"+new_seid+"</td><td id='stime2_row"+table_len+"'>"+new_stime+"</td><td id='pass2_row"+table_len+"'>"+new_pass+"</td><td id='status2_row"+table_len+"'>"+new_status+"</td><td id='reads2_row"+table_len+"'>"+new_reads+"</td><td><input type='button' id='edit2_button"+table_len+"' value='Edit' class='edit' onclick='edit2_row("+table_len+")'> <input type='button' id='save2_button"+table_len+"' value='Save' class='save' onclick='save2_row("+table_len+")'> <input type='image' src='images/trash-can.png' width='16' height='16' class='delete' onclick='delete2_row("+table_len+")'></td></tr>";
         
-         document.getElementById("new2_name").value="";
-         document.getElementById("new2_country").value="";
-         document.getElementById("new2_age").value="";
+         document.getElementById("new2_sno").value="";
+         document.getElementById("new2_serial").value="";
+         document.getElementById("new2_seid").value="";
+         document.getElementById("new2_stime").value="";
+         document.getElementById("new2_pass").value="";
+         document.getElementById("new2_status").value="";
+         document.getElementById("new2_reads").value="";
         }
         </script>
         <script>
@@ -578,28 +635,48 @@
              document.getElementById("edit3_button"+no).style.display="none";
              document.getElementById("save3_button"+no).style.display="block";
                 
-             var name=document.getElementById("name3_row"+no);
-             var country=document.getElementById("country3_row"+no);
-             var age=document.getElementById("age3_row"+no);
+             var sno=document.getElementById("sno3_row"+no);
+             var serial=document.getElementById("serial3_row"+no);
+             var seid=document.getElementById("seid3_row"+no);
+             var stime=document.getElementById("stime3_row"+no);
+             var pass=document.getElementById("pass3_row"+no);
+             var status=document.getElementById("status3_row"+no);
+             var reads=document.getElementById("reads3_row"+no);
                 
-             var name_data=name.innerHTML;
-             var country_data=country.innerHTML;
-             var age_data=age.innerHTML;
+             var sno_data=sno.innerHTML;
+             var serial_data=serial.innerHTML;
+             var seid_data=seid.innerHTML;
+             var stime_data=stime.innerHTML;
+             var pass_data=pass.innerHTML;
+             var status_data=status.innerHTML;
+             var reads_data=reads.innerHTML;
                 
-             name.innerHTML="<input type='text' id='name3_text"+no+"' value='"+name_data+"'>";
-             country.innerHTML="<input type='text' id='country3_text"+no+"' value='"+country_data+"'>";
-             age.innerHTML="<input type='text' id='age3_text"+no+"' value='"+age_data+"'>";
+             sno.innerHTML="<input type='text' id='sno3_text"+no+"' value='"+sno_data+"'>";
+             serial.innerHTML="<input type='text' id='serial3_text"+no+"' value='"+serial_data+"'>";
+             seid.innerHTML="<input type='text' id='seid3_text"+no+"' value='"+seid_data+"'>";
+             stime.innerHTML="<input type='text' id='stime3_text"+no+"' value='"+stime_data+"'>";
+             pass.innerHTML="<input type='text' id='pass3_text"+no+"' value='"+pass_data+"'>";
+             status.innerHTML="<input type='text' id='status3_text"+no+"' value='"+status_data+"'>";
+             reads.innerHTML="<input type='text' id='reads3_text"+no+"' value='"+reads_data+"'>";
             }
             
             function save3_row(no)
             {
-             var name_val=document.getElementById("name3_text"+no).value;
-             var country_val=document.getElementById("country3_text"+no).value;
-             var age_val=document.getElementById("age3_text"+no).value;
+             var sno_val=document.getElementById("sno3_text"+no).value;
+             var serial_val=document.getElementById("serial3_text"+no).value;
+             var seid_val=document.getElementById("seid3_text"+no).value;
+             var stime_val=document.getElementById("stime3_text"+no).value;
+             var pass_val=document.getElementById("pass3_text"+no).value;
+             var status_val=document.getElementById("status3_text"+no).value;
+             var reads_val=document.getElementById("reads3_text"+no).value;
             
-             document.getElementById("name3_row"+no).innerHTML=name_val;
-             document.getElementById("country3_row"+no).innerHTML=country_val;
-             document.getElementById("age3_row"+no).innerHTML=age_val;
+             document.getElementById("sno3_row"+no).innerHTML=sno_val;
+             document.getElementById("serial3_row"+no).innerHTML=serial_val;
+             document.getElementById("seid3_row"+no).innerHTML=seid_val;
+             document.getElementById("stime3_row"+no).innerHTML=stime_val;
+             document.getElementById("pass3_row"+no).innerHTML=pass_val;
+             document.getElementById("status3_row"+no).innerHTML=status_val;
+             document.getElementById("reads3_row"+no).innerHTML=reads_val;
             
              document.getElementById("edit3_button"+no).style.display="block";
              document.getElementById("save3_button"+no).style.display="none";
@@ -611,17 +688,25 @@
             }
             function add3_row()
             {
-             var new_name=document.getElementById("new3_name").value;
-             var new_country=document.getElementById("new3_country").value;
-             var new_age=document.getElementById("new3_age").value;
+             var new_sno=document.getElementById("new3_sno").value;
+             var new_serial=document.getElementById("new3_serial").value;
+             var new_seid=document.getElementById("new3_seid").value;
+             var new_stime=document.getElementById("new3_stime").value;
+             var new_pass=document.getElementById("new3_pass").value;
+             var new_status=document.getElementById("new3_status").value;
+             var new_reads=document.getElementById("new3_reads").value;
                 
              var table=document.getElementById("data_table3");
              var table_len=(table.rows.length)-1;
-             var row = table.insertRow(table_len).outerHTML="<tr id='rowz"+table_len+"'><td id='name3_row"+table_len+"'>"+new_name+"</td><td id='country3_row"+table_len+"'>"+new_country+"</td><td id='age3_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit3_button"+table_len+"' value='Edit' class='edit' onclick='edit3_row("+table_len+")'> <input type='button' id='save3_button"+table_len+"' value='Save' class='save' onclick='save3_row("+table_len+")'> <input type='image' src='images/trash-can.png' width='16' height='16' class='delete' onclick='delete3_row("+table_len+")'></td></tr>";
+             var row = table.insertRow(table_len).outerHTML="<tr id='rowz"+table_len+"'><td id='sno3_row"+table_len+"'>"+new_sno+"</td><td id='serial3_row"+table_len+"'>"+new_serial+"</td><td id='seid3_row"+table_len+"'>"+new_seid+"</td><td id='stime3_row"+table_len+"'>"+new_stime+"</td><td id='pass3_row"+table_len+"'>"+new_pass+"</td><td id='status3_row"+table_len+"'>"+new_status+"</td><td id='reads3_row"+table_len+"'>"+new_reads+"</td><td><input type='button' id='edit3_button"+table_len+"' value='Edit' class='edit' onclick='edit3_row("+table_len+")'> <input type='button' id='save3_button"+table_len+"' value='Save' class='save' onclick='save3_row("+table_len+")'> <input type='image' src='images/trash-can.png' width='16' height='16' class='delete' onclick='delete3_row("+table_len+")'></td></tr>";
             
-             document.getElementById("new3_name").value="";
-             document.getElementById("new3_country").value="";
-             document.getElementById("new3_age").value="";
+             document.getElementById("new3_sno").value="";
+             document.getElementById("new3_serial").value="";
+             document.getElementById("new3_seid").value="";
+             document.getElementById("new3_stime").value="";
+             document.getElementById("new3_pass").value="";
+             document.getElementById("new3_status").value="";
+             document.getElementById("new3_reads").value="";
             }
             </script>
             <script>
