@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Vertos</title>
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body class="">
+  <section class="shadow-sm sticky-top bg-white">
+    <div id="top-header" class="d-flex align-items-center justify-content-center" style="height: 76px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white flex-fill">
+      <div class="container-fluid">
+        <img src="images/logo_se_green_rgb_screen.png" id="logo" width="150px" height="50px">
+        <h4 class="ms-4 me-md-auto tog-1">DLMS Scheduler</h4>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarSupportedContent" style="background-color: #3dcd58;">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-lg-auto tog ps-sm-2 ps-md-4">
+            <li class="nav-item">
+              <button type="button" class="float-end m-2 btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </li>
+            <li style="margin-top:50px;" class="mb-2"><a href="index.html" class="fs-4 ms-3 mb-3 text-decoration-none text-white"><img src="images/layout.png" style="width: 20px; height: 20px;" class="me-2">Dashboard</a></li>
+            <li class="mb-2"><a href="run.html" class="fs-4 ms-3 mb-3 text-decoration-none text-white"><img src="images/dashboard.png" style="width: 20px; height: 20px;" class="me-2">Running Schedule</a></li>
+            <li class="mb-2"><a href="sche.html" class="fs-4 ms-3 mb-3 text-decoration-none text-white"><img src="images/gear.png" style="width: 20px; height: 20px;" class="me-2">Schedule config</a></li>
+            <li class="mb-2"><a href="" class="fs-4 ms-3 mb-3 text-decoration-none text-white"><img src="images/new-tab.png" style="width: 20px; height: 20px;" class="me-2">Auto Schedule</a></li>
+            <!--<li class="nav-item">
+              <a class="nav-link mx-2" aria-current="page" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">Career Planing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">My Development</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">Opportunities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">Switch to hire</a>
+            </li>-->
+          </ul>     
+        </div>
+        <div class="dropdown ms-auto me-4">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle mx-2" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="hugenerd" width="50" height="50" class="rounded-circle">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">New project...</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li>
+                  <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+    </nav>
+  </div>
+  </section>
+    <section>
+        <div id="side-header">
+          <div class="sidenav px-sm-2 px-md-4 text-start">
+            <a href="index.html" class="fs-5"><img src="images/layout.png" style="width: 28px; height: 28px;" class="me-2">Dashboard</a>
+            <a href="run.html" class="fs-5"><img src="images/dashboard.png" style="width: 28px; height: 28px;" class="me-2">Running Schedule</a>
+            <a href="sche.html" class="fw-bold border fs-5 border-white"><img src="images/gear.png" style="width: 28px; height: 28px;" class="me-2">Schedule config</a>
+              <a href="" class="fs-5"><img src="images/new-tab.png" style="width: 28px; height: 28px;" class="me-2">Auto Schedule</a>
+              <a class="btn btn-primary mx-2 ms-md-0 me-md-4" style="margin-top: 250px;" class="me-2">Get Support</a>
+          </div>
+              <div class="main-content my-4">
+                <section class="navbar-light bg-white">
+                    <div id="header">
+                      <nav id="navbar-example2" class="navbar px-3">
+                        <ul class="nav active-nav">
+                          <li class="nav-item active">
+                            <a class="nav-link" id="active" data-page="active" href="#active">Meter Details</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                    </section>
+                <div id="pages">
+                  <form>
+                    <div id="active" class="page" data-page="active" style="margin-top: 40px;">
+                        <div class="fs-6 text-start">
+                            <div id="default" class="group">Select communication type first from communication settings</div>
+                          <div id="option1" class="group">
+                            <div class="table-responsive fs-6">
+                              <table id="data_table" class="table border rounded-circle">
+                              <thead>
+                              <th scope="col">S No.</th>
+                              <th scope="col">Meter serial Number</th>
+                              <th scope="col">Device ID</th>
+                              <th scope="col">Schedule Time</th>
+                              <th scope="col">Password</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Read Status</th>
+                              <th scope="col"></th>
+                              </thead>
+                              <tbody>
+                                <tr id="row1">
+                                  <td id="sno_row1">3</td>
+                                  <td id="serial_row1">59</td>
+                                  <td id="seid_row1">apuzmp</td>
+                                  <td id="stime_row1">12:23:45</td>
+                                  <td id="pass_row1">opsm</td>
+                                  <td id="status_row1">running</td>
+                                  <td id="reads_row1">stop</td>
+                                  
+                                  <td>
+                                  <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                                  <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                                  <input type="image" src="images/trash-can.png" width="16" height="16" class="delete" onclick="delete_row('1')">
+                                  </td>
+                                  </tr>
+                                  <tr>
+                                  <td><input type="text" id="new_sno"></td>
+                                  <td><input type="text" id="new_serial"></td>
+                                  <td><input type="text" id="new_seid"></td>
+                                  <td><input type="text" id="new_stime"></td>
+                                  <td><input type="text" id="new_pass"></td>
+                                  <td><input type="text" id="new_status"></td>
+                                  <td><input type="text" id="new_reads"></td>
+                                  <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+                                  </tr>
+                              </tbody>
+                              </table>
+                              <div class="d-flex justify-content-between align-items-end">
+                                <button class="btn btn-outline-light btn-success mt-4 prev" onclick="next2op()">Previous</button>
+                                <button class="btn btn-outline-light btn-success mt-4" onclick="">Submit</button>
+                            </div>
+                              </div>
+                          </div>
+                          </div>
+                  </div>
+                  </form>
+                </div>
+              </div>
+        </div>
+    </section>
+    <script>
+        const lists = document.querySelectorAll(".active-nav li");
+        lists.forEach((item) => {
+        item.addEventListener("click", () => {
+        document.querySelector(".active-nav li.active").classList.remove("active");
+        item.classList.add("active");
+    });
+  });
+      </script>
+      <script>
+        $(document).ready(function() {
+    $(".active-nav li a").on('click', function(e) {
+        e.preventDefault()
+        var page = $(this).data('page');
+        $("#pages .page:not('hide')").stop().fadeOut('fast', function() {
+            $(this).addClass('hide');
+            $('#pages .page[data-page="'+page+'"]').fadeIn('slow').removeClass('hide');
+        });
+      });
+    });
+      </script>
+      <script>function edit_row(no)
+        {
+         document.getElementById("edit_button"+no).style.display="none";
+         document.getElementById("save_button"+no).style.display="block";
+            
+         var sno=document.getElementById("sno_row"+no);
+         var serial=document.getElementById("serial_row"+no);
+         var seid=document.getElementById("seid_row"+no);
+         var stime=document.getElementById("stime_row"+no);
+         var pass=document.getElementById("pass_row"+no);
+         var status=document.getElementById("status_row"+no);
+         var reads=document.getElementById("reads_row"+no);
+            
+         var sno_data=sno.innerHTML;
+         var serial_data=serial.innerHTML;
+         var seid_data=seid.innerHTML;
+         var stime_data=stime.innerHTML;
+         var pass_data=pass.innerHTML;
+         var status_data=status.innerHTML;
+         var reads_data=reads.innerHTML;
+            
+         sno.innerHTML="<input type='text' id='sno_text"+no+"' value='"+sno_data+"'>";
+         serial.innerHTML="<input type='text' id='serial_text"+no+"' value='"+serial_data+"'>";
+         seid.innerHTML="<input type='text' id='seid_text"+no+"' value='"+seid_data+"'>";
+         stime.innerHTML="<input type='text' id='stime_text"+no+"' value='"+stime_data+"'>";
+         pass.innerHTML="<input type='text' id='pass_text"+no+"' value='"+pass_data+"'>";
+         status.innerHTML="<input type='text' id='status_text"+no+"' value='"+status_data+"'>";
+         reads.innerHTML="<input type='text' id='reads_text"+no+"' value='"+reads_data+"'>";
+        }
+        
+        function save_row(no)
+        {
+         var sno_val=document.getElementById("sno_text"+no).value;
+         var serial_val=document.getElementById("serial_text"+no).value;
+         var seid_val=document.getElementById("seid_text"+no).value;
+         var stime_val=document.getElementById("stime_text"+no).value;
+         var pass_val=document.getElementById("pass_text"+no).value;
+         var status_val=document.getElementById("status_text"+no).value;
+         var reads_val=document.getElementById("reads_text"+no).value;
+        
+         document.getElementById("sno_row"+no).innerHTML=sno_val;
+         document.getElementById("serial_row"+no).innerHTML=serial_val;
+         document.getElementById("seid_row"+no).innerHTML=seid_val;
+         document.getElementById("stime_row"+no).innerHTML=stime_val;
+         document.getElementById("pass_row"+no).innerHTML=pass_val;
+         document.getElementById("status_row"+no).innerHTML=status_val;
+         document.getElementById("reads_row"+no).innerHTML=reads_val;
+        
+         document.getElementById("edit_button"+no).style.display="block";
+         document.getElementById("save_button"+no).style.display="none";
+        }
+        
+        function delete_row(no)
+        {
+         document.getElementById("row"+no+"").outerHTML="";
+        }
+        
+        function add_row()
+        {
+         var new_sno=document.getElementById("new_sno").value;
+         var new_serial=document.getElementById("new_serial").value;
+         var new_seid=document.getElementById("new_seid").value;
+         var new_stime=document.getElementById("new_stime").value;
+         var new_pass=document.getElementById("new_pass").value;
+         var new_status=document.getElementById("new_status").value;
+         var new_reads=document.getElementById("new_reads").value;
+            
+         var table=document.getElementById("data_table");
+         var table_len=(table.rows.length)-1;
+         var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='sno_row"+table_len+"'>"+new_sno+"</td><td id='serial_row"+table_len+"'>"+new_serial+"</td><td id='seid_row"+table_len+"'>"+new_seid+"</td><td id='stime_row"+table_len+"'>"+new_stime+"</td><td id='pass_row"+table_len+"'>"+new_pass+"</td><td id='status_row"+table_len+"'>"+new_status+"</td><td id='reads_row"+table_len+"'>"+new_reads+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='image' src='images/trash-can.png' width='16' height='16' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+        
+         document.getElementById("new_sno").value="";
+         document.getElementById("new_serial").value="";
+         document.getElementById("new_seid").value="";
+         document.getElementById("new_stime").value="";
+         document.getElementById("new_pass").value="";
+         document.getElementById("new_status").value="";
+         document.getElementById("new_reads").value="";
+        }
+        </script>
+
+  </body>
+
+  </html>
+  
