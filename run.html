@@ -73,9 +73,9 @@
         <div id="side-header">
           <div class="sidenav px-sm-2 px-md-4 text-start">
             <a href="index.html" class="fs-5"><img src="images/layout.png" style="width: 28px; height: 28px;" class="me-2">Dashboard</a>
-            <a href="run.html" class="fw-bold border fs-5 border-white"><img src="images/dashboard.png" style="width: 28px; height: 28px;" class="me-2">Running Schedule</a>
+            <a href="run.html" class="fw-bold border fs-5 bg-white border-white" style="color:#3dcd58;"><img src="images/dashboard-green.png" style="width: 28px; height: 28px;" class="me-2">Running Schedule</a>
             <a href="sche.html" class="fs-5"><img src="images/gear.png" style="width: 28px; height: 28px;" class="me-2">Schedule config</a>
-              <a href="" class="fs-5"><img src="images/new-tab.png" style="width: 28px; height: 28px;" class="me-2">Auto Schedule</a>
+              <a href="meter.html" class="fs-5"><img src="images/new-tab.png" style="width: 28px; height: 28px;" class="me-2">Auto Schedule</a>
               <a class="btn btn-primary mx-2 ms-md-0 me-md-4" style="margin-top: 250px;" class="me-2">Get Support</a>
           </div>
               <div class="main-content my-4">
@@ -114,15 +114,269 @@
                               <td>COM6</td>
                               <td>TCP/IP</td>
                               <td>23/11/2021</td>
+                              <td>18:07"00</td> 
+                              <td><span class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View</span></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>COM6</td>
+                              <td>Serial Port</td>
+                              <td>23/11/2021</td>
                               <td>18:07"00</td>
-                              <td><span class="btn btn-success">View</span></td>
+                              <td><span class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">View</span></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>COM6</td>
+                              <td>RS485</td>
+                              <td>23/11/2021</td>
+                              <td>18:07"00</td>
+                              <td><span class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">View</span></td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
+                      <div class="modal modal-lg fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content text-end">
+                            <div class="modal-body">
+                              <button type="button" class="btn-close mb-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                              <div class="table-responsive text-center fs-6">
+                                <table id="data_table3" class="table border rounded-circle">
+                                <thead>
+                                <th scope="col">Server IP</th>
+                                <th scope="col">Server port</th>
+                                <th scope="col">Client IP</th>
+                                <th scope="col">Schedule time</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Reading status</th>
+                                </thead>
+                                <tbody>
+                                  <tr id="rowz1">
+                                    <td id="sno3_row1">134:45:255:00</td>
+                                    <td id="serial3_row1">3600</td>
+                                    <td id="seid3_row1">100:67:09:89</td>
+                                    <td id="stime3_row1">23:12:09</td>
+                                    <td id="pass3_row1">umpt</td>
+                                    <td id="status3_row1">Failed</td>
+                                    <td id="reads3_row1">Incomplete</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal modal-lg fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content text-end">
+                            <div class="modal-body">
+                              <button type="button" class="btn-close mb-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                              <div class="table-responsive text-center fs-6">
+                                <table id="data_table2" class="table border rounded-circle">
+                                <thead>
+                                <th scope="col">S No.</th>
+                                <th scope="col">Server IP</th>
+                                <th scope="col">Server Port</th>
+                                <th scope="col">Schedule Time</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Reading Status</th>
+                                </thead>
+                                <tbody>
+                                  <tr id="rows1">
+                                    <td id="sno2_row1">2</td>
+                                    <td id="serial2_row1">127:00:00::00</td>
+                                    <td id="seid2_row1">1800</td>
+                                    <td id="stime2_row1">10:11:00</td>
+                                    <td id="pass2_row1">suss</td>
+                                    <td id="status2_row1">Successful</td>
+                                    <td id="reads2_row1">completed</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal modal-lg fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content text-end">
+                            <div class="modal-body">
+                              <button type="button" class="btn-close mb-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                              <div class="table-responsive text-center fs-6">
+                                <table id="data_table" class="table border rounded-circle">
+                                <thead>
+                                <th scope="col">S No.</th>
+                                <th scope="col">Meter serial Number</th>
+                                <th scope="col">Device ID</th>
+                                <th scope="col">Schedule Time</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Read Status</th>
+                                </thead>
+                                <tbody>
+                                  <tr id="row1">
+                                    <td id="sno_row1">3</td>
+                                    <td id="serial_row1">59</td>
+                                    <td id="seid_row1">apuzmp</td>
+                                    <td id="stime_row1">12:23:45</td>
+                                    <td id="pass_row1">opsm</td>
+                                    <td id="status_row1">running</td>
+                                    <td id="reads_row1">stop</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                                </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  <div id="upcoming" class="page hide" data-page="upcoming" style="margin-top: 40px;">
+                    <div class="table-responsive fs-6">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">No of meters</th>
+                            <th scope="col">Comport</th>
+                            <th scope="col">Com Type</th>
+                            <th scope="col">Schedule Date</th>
+                            <th scope="col">Schedule Time</th>
+                            <th scope="col">Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>COM6</td>
+                            <td>TCP/IP</td>
+                            <td>23/11/2021</td>
+                            <td>18:07"00</td> 
+                            <td><span class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">View</span></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>COM6</td>
+                            <td>Serial Port</td>
+                            <td>23/11/2021</td>
+                            <td>18:07"00</td>
+                            <td><span class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">View</span></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>COM6</td>
+                            <td>RS485</td>
+                            <td>23/11/2021</td>
+                            <td>18:07"00</td>
+                            <td><span class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">View</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="modal modal-lg fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content text-end">
+                          <div class="modal-body">
+                            <button type="button" class="btn-close mb-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="table-responsive text-center fs-6">
+                              <table id="data_table3" class="table border rounded-circle">
+                              <thead>
+                              <th scope="col">Server IP</th>
+                              <th scope="col">Server port</th>
+                              <th scope="col">Client IP</th>
+                              <th scope="col">Schedule time</th>
+                              <th scope="col">Password</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Reading status</th>
+                              </thead>
+                              <tbody>
+                                <tr id="rowz1">
+                                  <td id="sno3_row1">134:45:255:00</td>
+                                  <td id="serial3_row1">3600</td>
+                                  <td id="seid3_row1">100:67:09:89</td>
+                                  <td id="stime3_row1">23:12:09</td>
+                                  <td id="pass3_row1">umpt</td>
+                                  <td id="status3_row1">Failed</td>
+                                  <td id="reads3_row1">Incomplete</td>
+                                  </tr>
+                              </tbody>
+                              </table>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal modal-lg fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content text-end">
+                          <div class="modal-body">
+                            <button type="button" class="btn-close mb-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="table-responsive text-center fs-6">
+                              <table id="data_table2" class="table border rounded-circle">
+                              <thead>
+                              <th scope="col">S No.</th>
+                              <th scope="col">Server IP</th>
+                              <th scope="col">Server Port</th>
+                              <th scope="col">Schedule Time</th>
+                              <th scope="col">Password</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Reading Status</th>
+                              </thead>
+                              <tbody>
+                                <tr id="rows1">
+                                  <td id="sno2_row1">2</td>
+                                  <td id="serial2_row1">127:00:00::00</td>
+                                  <td id="seid2_row1">1800</td>
+                                  <td id="stime2_row1">10:11:00</td>
+                                  <td id="pass2_row1">suss</td>
+                                  <td id="status2_row1">Successful</td>
+                                  <td id="reads2_row1">completed</td>
+                                  </tr>
+                              </tbody>
+                              </table>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal modal-lg fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content text-end">
+                          <div class="modal-body">
+                            <button type="button" class="btn-close mb-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="table-responsive text-center fs-6">
+                              <table id="data_table" class="table border rounded-circle">
+                              <thead>
+                              <th scope="col">S No.</th>
+                              <th scope="col">Meter serial Number</th>
+                              <th scope="col">Device ID</th>
+                              <th scope="col">Schedule Time</th>
+                              <th scope="col">Password</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Read Status</th>
+                              </thead>
+                              <tbody>
+                                <tr id="row1">
+                                  <td id="sno_row1">3</td>
+                                  <td id="serial_row1">59</td>
+                                  <td id="seid_row1">apuzmp</td>
+                                  <td id="stime_row1">12:23:45</td>
+                                  <td id="pass_row1">opsm</td>
+                                  <td id="status_row1">running</td>
+                                  <td id="reads_row1">stop</td>
+                                  </tr>
+                              </tbody>
+                              </table>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
                   </div>
-                  <section id="upcoming" class="page hide" data-page="upcoming" style="margin-top: 40px;">
-                  </section>
                   </form>
                 </div>
               </div>

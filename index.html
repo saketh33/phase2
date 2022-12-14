@@ -72,41 +72,58 @@
     <section>
         <div id="side-header">
           <div class="sidenav px-sm-2 px-md-4 text-start">
-            <a href="index.html" class="fw-bold border fs-5 border-white"><img src="images/layout.png" style="width: 28px; height: 28px;" class="me-2">Dashboard</a>
+            <a href="index.html" class="fw-bold border bg-white fs-5 border-white" style="color:#3dcd58;"><img src="images/layout-green.png" style="width: 28px; height: 28px;" class="me-2">Dashboard</a>
             <a href="run.html" class="fs-5"><img src="images/dashboard.png" style="width: 28px; height: 28px;" class="me-2">Running Schedule</a>
             <a href="sche.html" class="fs-5"><img src="images/gear.png" style="width: 28px; height: 28px;" class="me-2">Schedule config</a>
-              <a href="" class="fs-5"><img src="images/new-tab.png" style="width: 28px; height: 28px;" class="me-2">Auto Schedule</a>
+              <a href="meter.html" class="fs-5"><img src="images/new-tab.png" style="width: 28px; height: 28px;" class="me-2">Auto Schedule</a>
               <a class="btn btn-primary mx-2 ms-md-0 me-md-4" style="margin-top: 250px;" class="me-2">Get Support</a>
           </div>
               <div class="main-content my-5">
               <div class="container-fluid text-start">
                 <h4>Total Number of meters</h4>
                 <div class="row fs-5">
-                  <div class="col-md-3 border my-2 m-md-4 py-2" style="background-color: #ced4da;"><img src="images/scheduled.png" style="width: 26px; height: 26px;" class="me-2">Scheduled:</div>
-                  <div class="col-md-3 border my-2 m-md-4 py-2" style="background-color: #ced4da;"><img src="images/successful.png" style="width: 26px; height: 26px;" class="me-2">Successful:</div>
-                  <div class="col-md-3 border my-2 m-md-4 py-2" style="background-color: #ced4da;"><img src="images/failed.png" style="width: 26px; height: 26px;" class="me-2">Failed:</div>
+                  <div class="col-md-3 border my-2 m-md-4 py-2" style="background-color: #ced4da;"><img src="images/scheduled.png" style="width: 26px; height: 26px;" class="me-2">Scheduled: 15000</div>
+                  <div class="col-md-3 border my-2 m-md-4 py-2" style="background-color: #ced4da;"><img src="images/successful.png" style="width: 26px; height: 26px;" class="me-2">Successful: 20000</div>
+                  <div class="col-md-3 border my-2 m-md-4 py-2" style="background-color: #ced4da;"><img src="images/failed.png" style="width: 26px; height: 26px;" class="me-2">Failed: 1000</div>
                 </div>
                 <div class="row my-3">
-                  <div class="col-md-6"><canvas id="myChart1" class="mx-auto" style="width:100%;max-width:800px"></canvas></div>
-                  <div class="col-md-6"><canvas id="myChart2" class="mx-auto" style="width:100%;max-width:800px"></canvas></div>
+                  <div class="col-md-6 text-center">
+                    <h5 class="pb-4">Total number of meter read yearly:</h5>
+                    <canvas id="myChart1" class="mx-auto" style="width:100%;max-width:800px"></canvas>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <h5 class="pb-4">Total number of meter schedyled this month:</h5>
+                    <canvas id="myChart2" class="mx-auto" style="width:100%;max-width:800px"></canvas>
+                  </div>
                 </div>
-                <div class="row my-5">
-                  <div class="col-md-6"><canvas id="myChart3" class="mx-auto" style="width:100%;max-width:800px"></canvas></div>
-                  <div class="col-md-6"><canvas id="myChart4" class="mx-auto" style="width:100%;max-width:800px"></canvas></div>
+                <div class="row my-5 text-center">
+                  <h5 class="pb-4">Total number of meter read yearly:</h5>
+                  <canvas id="myChart3" class="mx-auto" style="width:100%;max-width:800px"></canvas>
+                </div>
+                <div class="row my-5 text-center">
+                  <h5 class="pb-4">Total number of meter read yearly:</h5>
+                  <canvas id="myChart4" class="mx-auto" style="width:100%;max-width:800px"></canvas>
                 </div>
               </div>
               </div>
         </div>
     </section>
     <script>
-      var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-      var yValues = [55, 49, 44, 24, 15];
+      var xValues = ["Jan", "Feb", "Mar", "April", "May","June","July","Aug","Sept","Oct","Nov","Dec"];
+      var yValues = [55, 49, 44, 24, 15, 100, 25, 56, 4 , 34, 78,56];
         var barColors = [
           "#b91d47",
-          "#00aba9",
+          "#a36a2e",
+          "#2ea34d",
           "#2b5797",
           "#e8c3b9",
-          "#1e7145"
+          "#1e7145",
+          "#00aba9",
+          "#722ea3",
+          "#a33f2e",
+          "#a32e49",
+          "#2ea37c",
+          "#5c2823",
         ];
         
         new Chart("myChart1", {
@@ -119,11 +136,7 @@
             }]
           },
           options: {
-            legend: {display: false},
-            title: {
-              display: true,
-              text: "Total number of meter read yearly:"
-            }
+            legend: {display: false}
           }
         });
         </script>
@@ -145,10 +158,6 @@ new Chart("myChart2", {
   },
   options: {
     legend: {display: false},
-    title: {
-    display: true,
-    text: "Total number of meter schedyled this month:"
-    },
     scales: {
       yAxes: [{ticks: {min: 6, max:16}}],
     }
@@ -176,10 +185,6 @@ new Chart("myChart3", {
     }]
   },
   options: {
-    title: {
-      display: true,
-      text: "Total number of meter read yearly:"
-    }
   }
 });
     </script>
@@ -201,11 +206,7 @@ new Chart("myChart4", {
     }]
   },
   options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "Total number of meter read yearly:"
-    }
+    legend: {display: false}
   }
 });
     </script>
